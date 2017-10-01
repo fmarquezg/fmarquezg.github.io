@@ -8,5 +8,8 @@ modified: 2017-09-30
 comments: true
 ---
 
-foo
+In this post, I'm going to review Javier "Chicharito" Hernandez (aka Chichadios) heatmaps' with during the 2016-2017 season with Bayer Leverkusen. I will compare his heatmaps with the heatmaps produced by other top players to see how Hernandez moves and see if we can classify him as a 'poacher' or a dynamic 9. 
+
+The analysis is based on Convoluted Neural Network (CNN). The same algorithm used to classify images.
+
 
