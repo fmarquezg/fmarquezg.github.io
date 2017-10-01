@@ -13,7 +13,8 @@ In this post, I'm going to review Javier "Chicharito" Hernandez (aka Chichadios)
 The analysis is based on Convoluted Neural Network (CNN). The same algorithm used to classify images.
 <p>
 Players included in this analysis are:
-  * Bullet 1
+ 
+
 * Madzukic
 * Arturo Vidal
 * Lewandoski
