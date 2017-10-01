@@ -33,5 +33,31 @@ Players included in this analysis are:
 * Dybala
 
 
+## Results
+
+<figure>
+     <img src="/imagesch14_heatmaps_study/overall_sumnary.png">
+    <figcaption></figcaption>
+</figure>
+
+
+
+<figure>
+     <img src="/imagesch14_heatmaps_study/ch_lukaku.png">
+    <figcaption></figcaption>
+</figure>
+
+
+<figure>
+     <img src="/imagesch14_heatmaps_study/ch_suarez.png">
+    <figcaption></figcaption>
+</figure>
+
+
+<figure>
+     <img src="/imagesch14_heatmaps_study/ch_falcao.png">
+    <figcaption></figcaption>
+</figure>
+
 Source of heatmaps: www.whoscored.com 
 
