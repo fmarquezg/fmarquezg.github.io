@@ -14,7 +14,6 @@ The analysis is based on Convoluted Neural Network (CNN). The same algorithm use
 <p>
 Players included in this analysis are:
  
-
 * Madzukic
 * Arturo Vidal
 * Lewandoski
@@ -37,26 +36,29 @@ Players included in this analysis are:
 ## Results
 
 <figure>
-     <img src="/imagesch14_heatmaps_study/overall_sumnary.png">
+     <img src="/images/ch14_heatmaps_study/overall_sumnary.png">
     <figcaption></figcaption>
 </figure>
 
-
-
 <figure>
-     <img src="/imagesch14_heatmaps_study/ch_lukaku.png">
+     <img src="/images/NE_NFL/Patriots_Offensive_Plays.png">
     <figcaption></figcaption>
 </figure>
 
-
 <figure>
-     <img src="/imagesch14_heatmaps_study/ch_suarez.png">
+     <img src="/images/ch14_heatmaps_study/ch_lukaku.png">
     <figcaption></figcaption>
 </figure>
 
 
 <figure>
-     <img src="/imagesch14_heatmaps_study/ch_falcao.png">
+     <img src="/images/ch14_heatmaps_study/ch_suarez.png">
+    <figcaption></figcaption>
+</figure>
+
+
+<figure>
+     <img src="/images/ch14_heatmaps_study/ch_falcao.png">
     <figcaption></figcaption>
 </figure>
 
