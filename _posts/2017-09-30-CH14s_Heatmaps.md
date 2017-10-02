@@ -20,7 +20,7 @@ I will compare his club heatmaps during the 2016-2017 season with the heatmaps p
 
 <br>
 
-###The Analysis 
+### The Analysis 
 
 I first collected heatmaps from players from www.whoscored.com. This was a painful task as data is expensive and sites usually create a myriad of roadblocks to prevent people from scraping their site. That being said, I was able to collect about 40 heatmaps per player. This will affect the accuracy of the analysis.
 
@@ -85,7 +85,7 @@ Now, I must come clean... I used one season worth of data per player. Injuries, 
 Source of heatmaps: www.whoscored.com 
 
 
-## Footnote
+## Footnote for those Curious
 ### CNN Settings
 
 {% highlight python %}
@@ -117,7 +117,7 @@ test_set = test_datagen.flow_from_directory(
 classifier.fit_generator(
         training_set,
         steps_per_epoch=10,
-        epochs=100,
+        epochs=10000, #Yes, this took forever!
         verbose=2,
         validation_data=test_set,
         validation_steps=1)
