@@ -20,7 +20,8 @@ I will compare his club heatmaps during the 2016-2017 season with the heatmaps p
 
 <br>
 
-The Analysis 
+###The Analysis 
+
 I first collected heatmaps from players from www.whoscored.com. This was a painful task as data is expensive and sites usually create a myriad of roadblocks to prevent people from scraping their site. That being said, I was able to collect about 40 heatmaps per player. This will affect the accuracy of the analysis.
 
 <br>
@@ -44,14 +45,14 @@ Players included in this analysis are:
 * Radamel Falcao
 * Dybala
 
-Next I constructed a Convouted Neural Network (CNN) for categorical data.
-
-
-
-
+Next I constructed a Convouted Neural Network (CNN) for categorical data. Once the CNN is trained and cross-validated, I then fed a series of heatmaps of Herandez. The output was a list with the probabilities of the heatmap belonging to a player studied in the CNN.
 
 
 # Results
+
+As we can see in this graph, Hernandez' heatmaps look very similar to Suarez' heatmaps. Notice the value is close to .40, meaning we're 40% sure the heatmaps will belong to those of Suarez. Also note the values for Verratti and Dybala. I am aware they are not strikers, and they move more around midfield. As expected the model gave low values for those two lads.
+
+
 
 <figure>
      <img src="/images/ch14_heatmaps_study/overall_sumnary.png">
@@ -59,10 +60,8 @@ Next I constructed a Convouted Neural Network (CNN) for categorical data.
 </figure>
 
 
-<figure>
-     <img src="/images/ch14_heatmaps_study/ch_lukaku.png">
-    <figcaption></figcaption>
-</figure>
+The charts below plot the average heatmap of each of the top 3 ranked players by the model and puts them next to the average of Hernandez. A simple glance will agree with the results of the model. Suarez and Hernadez produce similar movements!
+
 
 
 <figure>
@@ -70,11 +69,18 @@ Next I constructed a Convouted Neural Network (CNN) for categorical data.
     <figcaption></figcaption>
 </figure>
 
+<figure>
+     <img src="/images/ch14_heatmaps_study/ch_lukaku.png">
+    <figcaption></figcaption>
+</figure>
 
 <figure>
      <img src="/images/ch14_heatmaps_study/ch_falcao.png">
     <figcaption></figcaption>
 </figure>
+
+
+Now, I must come clean... I used one season worth of data per player. Injuries, or manager decisions could have prevented the player to start a game which reduced my sample set. Overall, I was able to train my CNN with around 25 heatmaps per player. This was enough to produce a reasonable output, but in order to increase the accuracy and confidence I would have to retrain the network with around 100 heatmaps per player.
 
 Source of heatmaps: www.whoscored.com 
 
