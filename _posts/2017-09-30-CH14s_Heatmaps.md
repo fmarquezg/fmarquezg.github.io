@@ -12,7 +12,7 @@ Comparisons are never fair or easy, however we tend to always compare things. In
 
 <br>
 
-In this post I'm proposing a way to identify which players can be compared to each other based on their field positioning. To keep this simple I will compare only players' heatmaps. The control in here will be the greatest striker to bless this Earth.... Javier "Chicharito" Hernandez (aka Chichadios). 
+In this post I'm proposing a method to identify which players can be compared to each other based on their field positioning. To keep this simple I will compare only players' heatmaps. The control in here will be the greatest striker to bless this Earth.... Javier "Chicharito" Hernandez (aka Chichadios). In other words, I will discover which players move around the same areas as Hernandez and thus, which player stats can be 'fairly' compared.
 
 <br>
 
@@ -21,7 +21,7 @@ I will compare his club heatmaps during the 2016-2017 season with the heatmaps p
 <br>
 
 The Analysis 
-The analysis is based on Convoluted Neural Network (CNN). i 
+I first collected heatmaps from players from www.whoscored.com. This was a painful task as data is expensive and sites usually create a myriad of roadblocks to prevent people from scraping their site. That being said, I was able to collect about 40 heatmaps per player. This will affect the accuracy of the analysis.
 
 <br>
 
@@ -30,7 +30,6 @@ Players included in this analysis are:
 * Madzukic
 * Arturo Vidal
 * Lewandoski
-* Benzema
 * Edinson Cavani
 * Zlatan Ibrahimovich
 * Romelu Lukaku
@@ -44,6 +43,12 @@ Players included in this analysis are:
 * Cristiano Ronaldo
 * Radamel Falcao
 * Dybala
+
+Next I constructed a Convouted Neural Network (CNN) for categorical data.
+
+
+
+
 
 
 # Results
@@ -73,3 +78,41 @@ Players included in this analysis are:
 
 Source of heatmaps: www.whoscored.com 
 
+
+## Footnote
+### CNN Settings
+
+{% highlight python %}
+%matplotlib inline
+train_datagen = ImageDataGenerator(
+        rescale=1./255,
+        shear_range=0.2,
+        zoom_range=0.2,
+        horizontal_flip=True,
+        )
+
+test_datagen = ImageDataGenerator(rescale=1./255)
+
+training_set = train_datagen.flow_from_directory(
+        'Soccer_Heatmaps/dataset/training_set',
+        target_size=(64, 64),
+        #target_size=(300, 200),
+        batch_size=32,
+        class_mode='categorical',
+        shuffle=False)
+
+test_set = test_datagen.flow_from_directory(
+        'Soccer_Heatmaps/dataset/test_set',
+        target_size=(64, 64),
+        #target_size=(300, 200),
+        batch_size=32,
+        class_mode='categorical')
+
+classifier.fit_generator(
+        training_set,
+        steps_per_epoch=10,
+        epochs=100,
+        verbose=2,
+        validation_data=test_set,
+        validation_steps=1)
+{% endhighlight %}
