@@ -54,8 +54,12 @@ As we can see in the table below, Collin Johson was targeted 18 times and conver
 | Dorian Leonard      | 0 | 3 | 0% | 0 |
 | Collin Johnson      | 18 |   6 | 33% | 108 |
 
+We can see the distribution for Dorian Leonard appears to be decreasing linearly. Keep in mind the posterior probabilities for each receiver is a Uniform distribution $\text{S}_1(N)$  wasdfs
 
-
+<figure>
+     <img src="/images/XWR_17/3rd_cvr_posteriors.png">
+    <figcaption></figcaption>
+</figure>
 
 
 ## Appendix
