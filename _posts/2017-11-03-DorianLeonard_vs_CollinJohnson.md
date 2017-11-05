@@ -58,6 +58,33 @@ Check last 2 games (ackwoledge shitty start, CJ is a sophomore
 
 
 
+## Appendix
+
+
+### Methodology
+
+For this study, I started with Uniform distributions as my posteriors.  I decided to go with NUTS as to produce the posterior sample. There wasn't any major difference with Metropolis. 
+
+
+``` python
+with pm.Model() as model:
+    #prior
+    p_A = pm.Uniform("p_A", 0, 1)
+    p_B = pm.Uniform("p_B", 0, 1)
+    
+    # Deterministic delta function.
+    delta = pm.Deterministic("delta", p_A - p_B)
+
+    
+    # Set of observations
+    obs_A = pm.Bernoulli("obs_A", p_A, observed=observations_A)
+    obs_B = pm.Bernoulli("obs_B", p_B, observed=observations_B)
+
+    step = pm.NUTS()
+    trace = pm.sample(20000, step=step)
+    burned_trace=trace[1000:]
+```
+
 ### Validation
 For those who need the converge test in the above analysis...
 
