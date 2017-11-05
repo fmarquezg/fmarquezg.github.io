@@ -8,14 +8,26 @@ modified: 2017-10-22
 comments: true
 ---
 
-Prior to TCU game, Dorian Leonard is names the starting receiver. Dorian the Sr Collin Sophomore
+I compare Dorial Leonard (Sr.) and Collin Johnson's (So.) Game Day Perfomrance. To see which receiver should be the starting. The data accounts for the 2017 Season up to the TCU game.
 
-Receiver A: Dorian Leonard (DL) Sr.
-Receiver B: Collin Johnson (CJ) So.
+For purposes of the analysis and charts:
 
-Check attempts
+  * Receiver A: Dorian Leonard (DL) Sr.
+  * Receiver B: Collin Johnson (CJ) So.
+  
+## XWR Receptions
+| Player        | Times Targeted       | Conversions           | Conversion Rate           |
+| ------------- |:-------------:| -----:| -----:|
+| Dorian Leonard      | 25 | 13 | 52.0% |
+| Collin Johnson      | 66 |   34 | 51.5% |
 
-Dorian has been targeted 25 times, compared to CJ 66 times.
+
+
+## 3rd Down XWR Receptions
+| Player        | Times Targeted       | Conversions           | Conversion Rate           |
+| ------------- |:-------------:| -----:| -----:|
+| Dorian Leonard      | 25 | 13 | 52.0% |
+| Collin Johnson      | 66 |   34 | 51.5% |
 
 
 Check yardages
