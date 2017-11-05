@@ -54,12 +54,16 @@ As we can see in the table below, Collin Johson was targeted 18 times and conver
 | Dorian Leonard      | 0 | 3 | 0% | 0 |
 | Collin Johnson      | 18 |   6 | 33% | 108 |
 
-We can see the distribution for Dorian Leonard appears to be decreasing linearly. Keep in mind the posterior probabilities for each receiver is a Uniform distribution \\( U(0,1) \\)
+We can see the distribution for Dorian Leonard appears to be decreasing linearly. Keep in mind the posterior probabilities for each receiver is a Uniform distribution \\( U(0,1) \\). So with only 3 observations, we can't skew the distribution too much. Furthermore, all 3 attempts produced 0 conversions, so we should expect 0 to the the most probable point.
+
+For Collin Johson, we can see no nice Normal distribution, centered at 35%. This is lower than his overall conversion rate of 51%, previosuly calcualted.
 
 <figure>
      <img src="/images/XWR_17/3rd_cvr_posteriors.png">
     <figcaption></figcaption>
 </figure>
+
+The probability of Collin Johson being the better receiver during a third down situation is **57%**.  
 
 
 ## Appendix
@@ -92,10 +96,29 @@ with pm.Model() as model:
 ### Validation
 For those who need the converge test in the above analysis...
 
-A)
+#### All Downs Convergence data
 
 <figure>
      <img src="/images/XWR_17/CVR_converge_proof.png">
     <figcaption></figcaption>
 </figure>
 
+
+#### Third & 4th Down Convergence data
+
+Our sample traces look to converge in a similar way as the 'All Downs' convergence data. 
+
+<figure>
+     <img src="/images/XWR_17/3rd_CVR_converge_proof.png">
+    <figcaption></figcaption>
+</figure>
+
+Since, we are dealing with reduced sample sizes and I'm dubious about the results.  Let's also run a Geweke convergences test.
+
+Geweke convergence test checks differences means at different parts of the chains, so we fail to show failure of convergence if our Geweke test gives a number 2 stanrad deviations from the mean.
+
+<figure>
+     <img src="/images/XWR_17/3rd_down_Geweke_convergence.png">
+    <figcaption></figcaption>
+</figure>
+ 
