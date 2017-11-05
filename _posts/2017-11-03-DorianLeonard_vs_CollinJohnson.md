@@ -22,6 +22,15 @@ For purposes of the analysis and charts:
 | Collin Johnson      | 66 |   34 | 51.5% |
 
 
+<figure>
+     <img src="/images/XWR_17/cvr_posteriors.png">
+    <figcaption></figcaption>
+</figure>
+
+
+
+
+
 
 ## 3rd Down XWR Receptions
 | Player        | Times Targeted       | Conversions           | Conversion Rate           |
@@ -37,4 +46,14 @@ Check last 2 games (ackwoledge shitty start, CJ is a sophomore
 **The probability of Dorian Leaonard being better than Collin Johnson is 51%**, so this is pretty much a 50-50. 
 
 
+
+### Validation
+For those who need the converge test in the above analysis...
+
+A)
+
+<figure>
+     <img src="/images/XWR_17/CVR_converge_proof.png">
+    <figcaption></figcaption>
+</figure>
 
