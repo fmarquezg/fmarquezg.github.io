@@ -13,6 +13,7 @@ I compare Dorial Leonard (Sr.) and Collin Johnson's (So.) Game Day Perfomrance. 
 
   
 ## XWR Receptions
+
 | Player        | Times Targeted       | Conversions | Conversion Rate | Yrds Gained |
 | ------------- |:-------------:| -----:| -----:| -----:|
 | Dorian Leonard      | 25 | 13 | 52.0% | 126 |
