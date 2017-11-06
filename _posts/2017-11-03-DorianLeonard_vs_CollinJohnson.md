@@ -68,7 +68,7 @@ We can see the distribution for Dorian Leonard appears to be decreasing linearly
 For Collin Johson, we can see no nice Normal distribution, centered at 35%. This is lower than his overall conversion rate of 51%, previosuly calcualted.
 
 <figure>
-     <img src="/images/XWR_17/3rd_cvr_posteriors">
+     <img src="/images/XWR_17/3rd_cvr_posteriors.png">
     <figcaption></figcaption>
 </figure>
 
