@@ -15,12 +15,12 @@ I use data from Dorian Leonard (Sr.) and Collin Johnson's (So.) game day perform
 <p><br></p>
 Conversions in this study are defined by the following:
 
-* If 1st or 2nd down: Receiver catches the ball and gains at least 3 yards (or Touchdown)
-* If 3rd or 4th down: Receiver catches the ball gains the yards needed for the 1st down (or Touchdown)
+* **If 1st or 2nd down:** Receiver catches the ball and gains at least 3 yards (or Touchdown)
+* **If 3rd or 4th down:** Receiver catches the ball gains the yards needed for the 1st down (or Touchdown)
  
 ### Process
 
-The technique used in the  study is Bayesian Inference. I chose this, because of the difference in sample sizes between both players, and the fact that both sample sizes are rather small. I aim to find the 'true' conversion rate (cvr) for each receiver and then determine which receiver is better, based entirely on cvr. We use a Uniform distribution as the prior distribution, and then use observed data to model our posterior landscape. The posterior plots are the produced via sampling (using NUTS) method.
+The technique used in the  study is Bayesian Inference. I chose this, because of the difference in sample sizes between both players, and the fact that both sample sizes are rather small. I aim to find the 'true' conversion rate (cvr) for each receiver and then determine which receiver is better, based delta (\\( $cvr_A$ - $cvr_B$ \\). We use a Uniform distribution as the prior distribution, and then use observed data to model our posterior landscape. The posterior plots are the produced via sampling (using NUTS) method.
 
 ## XWR Receptions
 
