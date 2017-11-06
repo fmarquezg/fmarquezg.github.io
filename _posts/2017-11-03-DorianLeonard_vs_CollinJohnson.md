@@ -37,7 +37,7 @@ To keep the plots kosher (and easy for me to recycle code) I'll user the followi
   
 In the first two plots below, I show the probability distriution for the conversion rate of receiver A and B. The third plot, is the difference between A and B, in this case Dorian Leonard vs Collin Johnson. 
 <p><br></p>
-The x-axis is the cvr which spans anywhere form 0 to 1, and the y-axis represents the probability of each x being the 'true' conversion rate. This should read like any probability distribution graph; the highest point in the graph represents the most probable point.
+The x-axis is the cvr which spans anywhere form 0 to 1, and the y-axis represents the times x occurred in the posterior sample. The peak in the plot, represents the 'true' conversion rate. This should read like any probability distribution graph; the highest point in the graph represents the most probable point.
 
 <figure>
      <img src="/images/XWR_17/cvr_posteriors.png">
