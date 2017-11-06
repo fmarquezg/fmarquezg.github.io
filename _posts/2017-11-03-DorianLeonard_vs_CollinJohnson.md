@@ -12,7 +12,7 @@ I compare the two wide receivers competing for the XWR starting position on the 
 I use data from Dorian Leonard (Sr.) and Collin Johnson's (So.) game day performances to see if there is a guy who is without a doubt 'The Guy'. This study uses data up to the TCU game (11/04/2017).
 
 
-<br>
+<p><br></p>
 Conversions in this study are defined by the following:
 
 * If 1st or 2nd down: Receiver catches the ball and gains at least 3 yards (or Touchdown)
