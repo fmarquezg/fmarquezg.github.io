@@ -94,7 +94,7 @@ with pm.Model() as model:
 ```
 
 ### Validation
-For those who need the converge test in the above analysis...
+For those who need the converge tests...
 
 #### All Downs Convergence data
 
@@ -115,7 +115,21 @@ Our sample traces look to converge in a similar way as the 'All Downs' convergen
 
 Since, we are dealing with reduced sample sizes and I'm dubious about the results.  Let's also run a Geweke convergences test.
 
-Geweke convergence test checks differences means at different parts of the chains, so we fail to show failure of convergence if our Geweke test gives a number 2 stanrad deviations from the mean.
+Geweke convergence test checks differences means and variances at different parts of the same chain. PyMC3 allows you to pull the z-scores from the geweke function very easily. We will reject conversion if the majority of the points in the below plot, land 2 standard deviations from 0.  
+
+```python
+with model:
+    start = pm.find_MAP()
+    step = pm.Metropolis()
+    trace_mp = pm.sample(5000, step, start=start)
+
+z=pm.geweke(trace_mp, intervals=15)
+plt.scatter(*z['delta'].T)
+plt.hlines([-0.232,0.232],0,2500, linestyles='dotted')
+plt.xlim(0,2500)
+plt.title("3+ Down Geweke Convergence Test")
+````
+
 
 <figure>
      <img src="/images/XWR_17/3rd_down_Geweke_convergence.png">
