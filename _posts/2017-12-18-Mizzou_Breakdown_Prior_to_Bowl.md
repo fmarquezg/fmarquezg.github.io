@@ -17,7 +17,12 @@ Mizzou is is well balanced team. They tend to prefer running the ball.
 | 3rd     | Pass | 53.33% | 
 | 4th     | Pass |   2.43% |
 
-Top Rushers
+## Top Rushers
+
+<figure>
+     <img src="/images/Mizzou_Breakdown/RB_down.png">
+    <figcaption></figcaption>
+</figure>
 
 When Rushing, two players stand out. Ish Witter with 119 carries and 727 yards gained and Larry Roundtree III with 83 carries and 401 yards gained.
 
@@ -44,14 +49,12 @@ Larry Rountree III yards gained.
 
 
 
-Top Receivers
-
+## Top Receivers
 <figure>
-     <img src="/images/Mizzou_Breakdown/RB_down.png">
+     <img src="/images/Mizzou_Breakdown/receivers_comp.png">
     <figcaption></figcaption>
 </figure>
 
-Ish Witter is the workhorse of the team. 
 
 
 1. MIZ_WR_6_J'Mon Moore
