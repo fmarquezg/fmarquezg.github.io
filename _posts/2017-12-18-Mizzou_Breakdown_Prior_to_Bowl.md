@@ -30,6 +30,11 @@ MIZ_RB_33_Larry Rountree III
 
 Top Receivers
 
+<figure>
+     <img src="/images/Mizzou_Breakdown/RB_down.png">
+    <figcaption></figcaption>
+</figure>
+
 1. MIZ_WR_6_J'Mon Moore
 2. MIZ_WR_84_Emanuel Hall
 3. MIZ_TE_81_Albert Okwuegbunam
