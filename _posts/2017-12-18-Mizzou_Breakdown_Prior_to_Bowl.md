@@ -10,6 +10,11 @@ comments: true
 
 Mizzou is is well balanced team. They tend to prefer running the ball.
 
+Ish Witter, their biggest threat as a RB and Emanuel Hall an explosive WR who can make the big play and gain the big yards in a single play.
+
+Key is to cover Tight End Albert Okwuegbunam (Fr) who has 11 touchdowns and averages 14.9 yrds.Okwuegbunam's best performances were against Vanderbilt, where he received for 116 yards and against Arkansas, where he received for 63 yards.
+
+
 | Down        | Play Type     | Percentage Called |
 | ------------- |:-------------:| -----:|
 | 1st     | Pass | 42.20% | 
