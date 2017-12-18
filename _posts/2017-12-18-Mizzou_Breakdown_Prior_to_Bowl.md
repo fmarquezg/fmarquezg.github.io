@@ -50,16 +50,38 @@ Larry Rountree III yards gained.
 
 
 ## Top Receivers
+
 <figure>
      <img src="/images/Mizzou_Breakdown/receivers_comp.png">
     <figcaption></figcaption>
 </figure>
 
+Emanuel Hall yards gained.
 
+| Down        |AVG    | vs ARK | vs UGA |
+| ------------- |:-------------:| -----:| -----:|
+| 1st     | 18.0 | 28.0 |  63.0 |
+| 2nd     | 5.3 |   0.0 | 3.0 |
+| 3rd     | 16.8 | 55.0 |  36.0 |
+| 4th     | NA |   NA | NA |
 
-1. MIZ_WR_6_J'Mon Moore
-2. MIZ_WR_84_Emanuel Hall
-3. MIZ_TE_81_Albert Okwuegbunam
-4. MIZ_WR_12_Johnathon Johnson
+J'Mon Moore yards gained.
+
+| Down        |AVG    | vs ARK | vs UGA |
+| ------------- |:-------------:| -----:| -----:|
+| 1st     | 8.6 | 9.4 |  8.0 |
+| 2nd     | 10.6 |   10.3 | NA |
+| 3rd     | 9.8 | 0.0 |  0.0 |
+| 4th     | NA |   1.0 | NA |
+
+Albert Okwuegbunam yards gained.
+
+| Down        |AVG    | vs ARK | vs UGA |
+| ------------- |:-------------:| -----:| -----:|
+| 1st     | 10.63 | 12.5 |  0.0 |
+| 2nd     | 8.88 |   19.0 | 4.0 |
+| 3rd     | 11.33 | 9.5 |  6.0 |
+| 4th     | 0 |   NA | NA |
+
 
 Chart of Receiver Stats
