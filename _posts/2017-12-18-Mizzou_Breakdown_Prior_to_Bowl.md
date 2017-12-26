@@ -22,6 +22,8 @@ Key is to cover Tight End Albert Okwuegbunam (Fr) who has 11 touchdowns and aver
 | 3rd     | Pass | 53.33% | 
 | 4th     | Pass |   2.43% |
 
+In the following performance breakdown, I compare last 6 game average (AVG), Arkansas game, and Georgia game. Georgia is the only team that managed to keep Mizzou under 30 points.
+
 ## Top Rushers
 
 <figure>
@@ -61,6 +63,12 @@ Larry Rountree III yards gained.
     <figcaption></figcaption>
 </figure>
 
+Mizzou's top receivers are Emanuel Hall, J'Mon Moore, and Albert Okwuegbunam. I attemped to get data on ball drops and reception radius, but the data source didn't really provide details to infer. With the lack of information, I simply compute the ratio of completed passes. Hall and Okwuegbunam completed receptions at about 36% rate. The real MVP was J'Mon Moore, who completed receptions 54% of the time he was targeted. 
+
+
+
+
+
 Emanuel Hall yards gained.
 
 | Down        |AVG    | vs ARK | vs UGA |
@@ -89,4 +97,4 @@ Albert Okwuegbunam yards gained.
 | 4th     | 0 |   NA | NA |
 
 
-Chart of Receiver Stats
+
