@@ -25,7 +25,7 @@ Ish Witter, their biggest threat as a RB and Emanuel Hall an explosive WR who ca
 
 
 ## RUSH AND PASS player breakdown 
-In the following performance breakdown, I compare last 6 game average (AVG), Arkansas game, and Georgia game. Georgia is the only team that managed to keep Mizzou under 30 points.
+In the following performance breakdown, I do an offensive breakdown of the last 6 games. The first chart is an overall perfomrance chart (rush and pass), followed by a yrd gain per down. The down analysis charts shows the aggregate of  average (AVG), Arkansas game, and Georgia game. I marked Arkansas and Georgia as Arkansas separately because Arkansas is the most recent game and Georgia was the only team to keep the Mizzou's offense under 30 points.
 
 ### Top Rushers
 
