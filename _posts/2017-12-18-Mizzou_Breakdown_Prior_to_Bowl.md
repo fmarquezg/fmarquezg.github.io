@@ -8,11 +8,8 @@ modified: 2017-12-16
 comments: true
 ---
 
-Mizzou is is well balanced team. They tend to prefer running the ball.
+Mizzou is is well balanced team. They pass and run the ball almost evenly, but chose to run slightly more often.
 
-Ish Witter, their biggest threat as a RB and Emanuel Hall an explosive WR who can make the big play and gain the big yards in a single play.
-
-Key is to cover Tight End Albert Okwuegbunam (Fr) who has 11 touchdowns and averages 14.9 yrds.Okwuegbunam's best performances were against Vanderbilt, where he received for 116 yards and against Arkansas, where he received for 63 yards.
 
 
 | Down        | Play Type     | Percentage Called |
@@ -22,9 +19,15 @@ Key is to cover Tight End Albert Okwuegbunam (Fr) who has 11 touchdowns and aver
 | 3rd     | Pass | 53.33% | 
 | 4th     | Pass |   2.43% |
 
+
+
+Ish Witter, their biggest threat as a RB and Emanuel Hall an explosive WR who can make the big play and gain the big yards in a single play additionally, Mizzou has a strong TE Albert Okwuegbunam (Fr) who has 11 touchdowns and averages 14.9 yrds. 
+
+
+## RUSH AND PASS player breakdown 
 In the following performance breakdown, I compare last 6 game average (AVG), Arkansas game, and Georgia game. Georgia is the only team that managed to keep Mizzou under 30 points.
 
-## Top Rushers
+### Top Rushers
 
 <figure>
      <img src="/images/Mizzou_Breakdown/RB_down.png">
@@ -56,7 +59,7 @@ Larry Rountree III yards gained.
 
 
 
-## Top Receivers
+### Top Receivers
 
 <figure>
      <img src="/images/Mizzou_Breakdown/receivers_comp.png">
@@ -69,7 +72,7 @@ Mizzou's top receivers are Emanuel Hall, J'Mon Moore, and Albert Okwuegbunam. I 
 
 
 
-Emanuel Hall yards gained.
+#### Emanuel Hall yards gained.
 
 | Down        |AVG    | vs ARK | vs UGA |
 | ------------- |:-------------:| -----:| -----:|
@@ -78,7 +81,7 @@ Emanuel Hall yards gained.
 | 3rd     | 16.8 | 55.0 |  36.0 |
 | 4th     | NA |   NA | NA |
 
-J'Mon Moore yards gained.
+#### J'Mon Moore yards gained.
 
 | Down        |AVG    | vs ARK | vs UGA |
 | ------------- |:-------------:| -----:| -----:|
@@ -87,7 +90,7 @@ J'Mon Moore yards gained.
 | 3rd     | 9.8 | 0.0 |  0.0 |
 | 4th     | NA |   1.0 | NA |
 
-Albert Okwuegbunam yards gained.
+#### Albert Okwuegbunam yards gained.
 
 | Down        |AVG    | vs ARK | vs UGA |
 | ------------- |:-------------:| -----:| -----:|
