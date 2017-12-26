@@ -36,7 +36,8 @@ In the following performance breakdown, I compare last 6 game average (AVG), Ark
 
 When Rushing, two players stand out. Ish Witter with 119 carries and 727 yards gained and Larry Roundtree III with 83 carries and 401 yards gained.
 
-Ish Witter Yards gained.
+
+#### Ish Witter Yards gained.
 
 | Down        |AVG    | vs ARK | vs UGA |
 | ------------- |:-------------:| -----:| -----:|
@@ -46,7 +47,7 @@ Ish Witter Yards gained.
 | 4th     | 1.0 |   NA | NA |
 
 
-Larry Rountree III yards gained.
+#### Larry Rountree III yards gained.
 
 | Down        |AVG    | vs ARK | vs UGA |
 | ------------- |:-------------:| -----:| -----:|
