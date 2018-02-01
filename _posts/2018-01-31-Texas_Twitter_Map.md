@@ -16,14 +16,16 @@ Doing a plain and simple count analysis we get the following results
 
 * BR_NBA tweeted BleacherReport 106 times
 * DB_BucksFB tweeted SleeperAthletes 98 times
-*rivalsmike tweeted Rivals 96 times
-*CampbellGators tweeted CyFairISD 93 times
-*BobLabriola tweeted steelers 91 time
-*ghaugii7 tweeted wyo_football 88 times
-*dfwvarsity tweeted Gosset41 87 times
-*VYPEInnerLoop tweeted emcstats 86 times
-*corbymeekins tweeted TexasFootball 85 times
-*CampbellGators tweeted Dr_PWilliamsJ 84 times
+* rivalsmike tweeted Rivals 96 times
+* CampbellGators tweeted CyFairISD 93 times
+* BobLabriola tweeted steelers 91 time
+* ghaugii7 tweeted wyo_football 88 times
+* dfwvarsity tweeted Gosset41 87 times
+* VYPEInnerLoop tweeted emcstats 86 times
+* corbymeekins tweeted TexasFootball 85 times
+* CampbellGators tweeted Dr_PWilliamsJ 84 times
+
+
 
 | Rank | Twitter User        | PageRank  |
 | ------------- |:-------------:|:-------------:|
