@@ -52,3 +52,13 @@ Doing a plain and simple count analysis we get the following results
 
 
 ## Reuslts
+
+Not surprisingly the NFL twitter acccount is ranked as number 1. Of all coaching staff, Cryan Carrington (BCarringtonUT) is ranked the highest. 
+
+
+<figure>
+     <img src="/images/Graphs/BC_tweet_map.png">
+    <figcaption></figcaption>
+</figure>
+
+
