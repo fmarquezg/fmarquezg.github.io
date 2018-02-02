@@ -3,16 +3,16 @@ layout: post
 title: "Bryan Carrington the recruiting MVP"
 modified:
 excerpt: ""
-tags: [Python, data mining, analytics]
+tags: [Scala, Twitter, GraphX, Neo4j data mining, analytics]
 modified: 2018-01-31
 comments: true
 ---
 
-In this study I'm analyzing the Twitter landscape of major recruits and coaching staff of the University of Texas. 
+Twitter is an amazying networking tool (duh!), and the University of Texas Football program is leveraging strongly to market the brand with Recruits. In this study I analyzed a Twitter segment (17,916 twitter users), to shed light on landscape of Texas Football to see how important each member of the Texas family is for the network. Spoiler alert - Bryan Carrington is killing it!
 
-This analysis includes 17,916 twitter users. 
+First thing I did was to see if a particular user was overwhelmingly active. The only insightful information I found was that Coach Meekins mentioned Texas Football 85 times. That's top 10 in user to user tweet count!
 
-Doing a plain and simple count analysis we get the following results
+Here is the full top 10 list:
 
 * BR_NBA tweeted BleacherReport 106 times
 * DB_BucksFB tweeted SleeperAthletes 98 times
@@ -25,6 +25,10 @@ Doing a plain and simple count analysis we get the following results
 * corbymeekins tweeted TexasFootball 85 times
 * CampbellGators tweeted Dr_PWilliamsJ 84 times
 
+
+Next I ran PageRank to quantify the 'importance' of each user in the network. Without getting too mathy,a user with a high PageRank value means that the user is in contact directly or indirectly by several other users. Not surprisingly, NFL is the highest user in our list and TexasFootball is ranked 4th. Most of the top 20 users are organizations tweeting images, gifs or important football news. 
+
+AS we start going dowin in the table, we see a popular recruit @D_JAMISON5 who started sharing lots of content on twitter and recently commited to Texas. Right under him ranked 18th we see @BCarringtonUT! The highest ranked member of the Texas Football staff. Ranked 18 out of 18K users!
 
 
 | Rank | Twitter User        | PageRank  |
@@ -51,14 +55,39 @@ Doing a plain and simple count analysis we get the following results
  | 20 | MikeRoach247 | 1.366327305165802 | 
 
 
-## Reuslts
+Bryan Carrington scoring high in this analysis means he is strengthening the Texas brand on social media. It is worth analyzing his interactions with the network to understand why he is so important.
 
-Not surprisingly the NFL twitter acccount is ranked as number 1. Of all coaching staff, Cryan Carrington (BCarringtonUT) is ranked the highest. 
+The graph below centers him and shows who tweeted at him and who was tweeted by him. As expected it is a very rich graph, so you might have to zoom in to see it in more detail.
 
 
 <figure>
      <img src="/images/Graphs/BC_tweet_map.png">
     <figcaption></figcaption>
 </figure>
+
+Mr. Carrington keep doing you and Hook Em'!
+
+
+### Appendix
+
+### How was this data collected
+
+I started with 13 twitter handles:
+
+* TheTommyBush11
+* _ACook21
+* lil_STERNS2
+* TexasFootball
+* DrewMehringer
+* D1__JW
+* _BrennanEagles__
+* CoachWarehime
+* Coach_Naivar
+* Vonte_4
+* BCarringtonUT
+* CoachTomHerman
+* Christo24AHFC
+
+I collected the most recent 200 tweets by each user and recorded the twitter handles of the users being tweeted at by the original 13 handles. I then collected the most recent 200 tweets by the users being tweeted at by the original 13 tweeter handles. I repeated this process 20 times have a a decent sized network.
 
 
