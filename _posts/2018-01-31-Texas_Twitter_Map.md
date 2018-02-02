@@ -10,9 +10,12 @@ comments: true
 
 Twitter is an amazying networking tool (duh!), and the University of Texas Football program seems to be leveraging it to market itself to recruits. In this study I analyzed a Twitter segment (17,916 twitter users), to shed light on landscape of Texas Football to see how important each member of the Texas family is for the network. Spoiler alert - Bryan Carrington is killing it!
 
+<br>
 
 
 The graph below centers over Bryan Carrington who is the most imprtant actor among the Texas Football staff.
+
+<br>
 
 <figure>
      <img src="/images/Graphs/BC_tweet_map.png">
