@@ -11,6 +11,7 @@ comments: true
 Twitter is an amazying networking tool (duh!), and the University of Texas Football program seems to be leveraging it to market itself to recruits. In this study I analyzed a Twitter segment (17,916 twitter users), to shed light on landscape of Texas Football to see how important each member of the Texas family is for the network. Spoiler alert - Bryan Carrington is killing it!
 
 
+
 The graph below centers over Bryan Carrington who is the most imprtant actor among the Texas Football staff.
 
 <figure>
@@ -28,7 +29,10 @@ Mr. Carrington keep doing you and Hook Em'!
 I've said Carrington is the most important member in this Texas Football network, now I'll go over how I reached to that conclusion.
 
 
+
 I ran PageRank to quantify the 'importance' of each user in the network. Without getting too mathy, this algorithm will give a high value to a user who is in contact directly or indirectly by several other users. Not surprisingly, most of the top 20 ranked users are organizations or websites producing content. NFL is not surprisingly the highest ranked twitter handle, because after all, this is a football focused sample.
+
+
 
 AS we start going dowin in the table we see find, ranked 18th out of 18K, we see @BCarringtonUT! He is the highest ranked member of the Texas Football staff. Bryan Carrington scoring high in this analysis means he is strengthening the Texas brand on social media. 
 
