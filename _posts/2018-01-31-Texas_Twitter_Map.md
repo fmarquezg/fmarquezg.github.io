@@ -31,10 +31,11 @@ Mr. Carrington keep doing you and Hook Em'!
 
 I've said Carrington is the most important member in this Texas Football network, now I'll go over how I reached to that conclusion.
 
-
+<br>
 
 I ran PageRank to quantify the 'importance' of each user in the network. Without getting too mathy, this algorithm will give a high value to a user who is in contact directly or indirectly by several other users. Not surprisingly, most of the top 20 ranked users are organizations or websites producing content. NFL is not surprisingly the highest ranked twitter handle, because after all, this is a football focused sample.
 
+<br>
 
 
 AS we start going dowin in the table we see find, ranked 18th out of 18K, we see @BCarringtonUT! He is the highest ranked member of the Texas Football staff. Bryan Carrington scoring high in this analysis means he is strengthening the Texas brand on social media. 
@@ -69,7 +70,7 @@ AS we start going dowin in the table we see find, ranked 18th out of 18K, we see
 
 
 
-### Appendix
+## Appendix
 
 ### How was this data collected
 
