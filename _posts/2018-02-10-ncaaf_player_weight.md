@@ -60,7 +60,8 @@ The sample is reduced to players active in during all seasons between 2015-2017.
 
 <br>
 
-As we can see, Wisconsin is excelling and bulking players up. I expected all teams to have a positive slope, since after all players are maturing physically. However Alabama, Georgia, AND Ohio State slimmed down their OL. 
+As we can see, Wisconsin is excelling and bulking players up. I expected all teams to have a positive slope, since after all players are maturing physically. However Alabama, Georgia, AND Ohio State slimmed down their OL. The negative slope might mean players are getting leaner. Perhaps 2016 was a bulking season for some, and 2017 was the season where excess fat was shreded to be ready for primetime. 
+
 
 <figure>
      <img src="/images/linemen/school_progress_ol.png">
