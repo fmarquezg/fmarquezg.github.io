@@ -11,7 +11,10 @@ comments: true
 
 On standard formations, the ofensive line (OL) consists of Center, 2 Guards, 2 Offensive Tackles and sometimes 1 or 2 Tight ends. Right in front of the OL, the denfensive line (DL) lines up. The DL consists of 1 or 2 Defensive tackles, and 2 defensive ends. 
 
+<br>
+
 OL tend to be heavier than DL.This make sense, since defensive linement are the ones who need to be agile to sneek between the holes to sack the QB. On the other hand you the OL needs to hold its ground and essentially be the 'unmovable object'.
+
 
 <figure>
      <img src="/images/linemen/ol_dl_years.png">
@@ -20,6 +23,8 @@ OL tend to be heavier than DL.This make sense, since defensive linement are the 
 
 
 In this post, I analyze the 3 most recent (2015-2017) rosters for top NCAA Football, and oklahoma football. This posts focuses on weight of the OL. I explore which school has the heavier guys, and which schools develops the heaviest players.
+
+<br>
 
 The teams are:
 
@@ -52,6 +57,8 @@ The average OL weight is 300lbs. Alabama was the heaviest OL in 2016, the year t
 
 For this last part, I want to see if there is a program that does a better job at bulking players up. 
 The sample is reduced to players active in during all seasons between 2015-2017. The idea of doing so, is to avoid Juco players boosting the averages, or players going pro and reducing the avg weight of the team. I also reduced the sample size by limiting to 6 schools (Alabama, Ohio State, ou, Texas, Wisconsin, and Georgia).
+
+<br>
 
 As we can see, Wisconsin is excelling and bulking players up. I expected all teams to have a positive slope, since after all players are maturing physically. However Alabama, Georgia, AND Ohio State slimmed down their OL. 
 
