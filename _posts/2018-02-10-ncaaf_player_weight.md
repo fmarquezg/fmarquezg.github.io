@@ -26,7 +26,7 @@ In this post, I analyze the 3 most recent (2015-2017) rosters for top NCAA Footb
 
 <br>
 
-The teams are:
+Schools:
 
 1. Texas
 2. Alabama
@@ -38,8 +38,8 @@ The teams are:
 8. Notre Dame
 9. Wisconsin
 10. UCF
-11.- Texas Tech
-12.- oklahoma
+11. Texas Tech
+12. oklahoma
 
 
 ## Weight by School
