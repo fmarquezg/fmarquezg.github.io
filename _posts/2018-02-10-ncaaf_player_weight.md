@@ -37,8 +37,9 @@ The teams are:
 12.- oklahoma
 
 
+## Weight by School
 
-The average OL weight is 300lbs. 
+The average OL weight is 300lbs. Alabama was the heaviest OL in 2016, the year they won the National Championship. However, in 2017, the the heaviest OL belonged to Ohio State and Texas Tech. The 2017 champion, UGA, has the 5th heaviest line in this analysis. Therefore, as we all know, weight alone isn't going to win a Championship.
 
 
 <figure>
@@ -47,6 +48,12 @@ The average OL weight is 300lbs.
 </figure>
 
 
+## Player Evolution
+
+For this last part, I want to see if there is a program that does a better job at bulking players up. 
+The sample is reduced to players active in during all seasons between 2015-2017. The idea of doing so, is to avoid Juco players boosting the averages, or players going pro and reducing the avg weight of the team. I also reduced the sample size by limiting to 6 schools (Alabama, Ohio State, ou, Texas, Wisconsin, and Georgia).
+
+As we can see, Wisconsin is excelling and bulking players up. I expected all teams to have a positive slope, since after all players are maturing physically. However Alabama, Georgia, AND Ohio State slimmed down their OL. 
 
 <figure>
      <img src="/images/linemen/school_progress_ol.png">
@@ -57,4 +64,3 @@ The average OL weight is 300lbs.
 
 
 
-<br>
