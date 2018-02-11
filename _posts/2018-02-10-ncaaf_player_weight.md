@@ -23,22 +23,22 @@ In this post, I analyze the 3 most recent (2015-2017) rosters for top NCAA Footb
 
 The teams are:
 
-1.- Texas
-2.- Alabama
-3.- Clemson
-4.- Baylor
-5.- Georgia
-6.- Ohio State
-7.- Michigan
-8.- Notre Dame
-9.- Wisconsin
-10.- UCF
+1. Texas
+2. Alabama
+3. Clemson
+4. Baylor
+5. Georgia
+6. Ohio State
+7. Michigan
+8. Notre Dame
+9. Wisconsin
+10. UCF
 11.- Texas Tech
 12.- oklahoma
 
 
 
-Plotting all schools 
+The average OL weight is 300lbs. 
 
 
 <figure>
