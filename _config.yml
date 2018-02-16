@@ -27,11 +27,11 @@ kramdown:
 # Site owner
 owner:
   name: Francisco Marquez
-  avatar: me.jpg
-  bio: "Data analyst, computer geek, soccer fan "
+  avatar: twtr.PNG #me.jpg
+  bio: "Data analyst, Football fan "
   email: 
   disqus-shortname: 
-  twitter: #username
+  twitter: @TheMarquezF
   facebook: #username
   google:
     plus: #username
