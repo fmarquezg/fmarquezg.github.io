@@ -101,29 +101,22 @@ Multiple R-squared:  0.06755,	Adjusted R-squared:  0.0506
 F-statistic: 3.985 on 1 and 55 DF,  p-value: 0.05088
 ```
 
+## Just for fun
 
-Looking at residual vs fitted plot, there is no distinctive pattern, so I'll it's safe to call this a linear relationship.
+Now, just for fun, I'll look at the residual fits.
+<figure>
+     <img src="/images/nfl_passratio/season_fit.jpeg">
+    <figcaption></figcaption>
+</figure>
+
+* Residuals vs Fitted: there is no distinctive pattern, so I'll it's safe to call this a linear relationship.
+* Normal Q-Q plot: looks like a stright line, I can validate the errors follow a normal distribution.
+* Scale-Location: In this graph we test our assumption of equal variance (homoscedasticity). At simple glance, points look equaly spread out, so nothing werid here
+* Residual vs Leverage: Nothing really outside Cook's distance, thus there's no single point hurting my regression
 
 
-Next, let's make sure the residuals are normally distributed. Since we see close to straight line, it is safe to say they are.
-
-
-In this graph we test our assumption of equal variance (homoscedasticity). At simple glance, points look equaly spread out. 
-
-
-
-8,23,30 are causing issues on my model. 
-
-| point        | Team     | Pass Ratio | Wins | PR Rank
-| ------------- |:-------------:| -----:| -----:| -----:|
-| 8     | CLE | 0.058 | 0 | 31st |
-| 23     | NYG |   0.047 | 3 | 13th |
-| 30     | TB | 0.041 | 5 | 2nd |
-
-These teams had a very bad 2017, no doubt. 
-
-As any respectable dad would say, 'Defense wins championships' Bingo! Tampa Bay had the worst defense, followed  by NYG. Cleaveland's D was ranked 19, so considering that Cleaveland is ranked 13th on pass ratio, then it makes sense. There is hope! Maybe I shouldn't be saying Pass Ratio wins games, but maybe puts points on the board?
-
+## Conclusion
+At this point, I think continuing with this excersie is moot. While PR is a good predictor in soccer, it just doesn't transfer well to football. 
 
 
 
