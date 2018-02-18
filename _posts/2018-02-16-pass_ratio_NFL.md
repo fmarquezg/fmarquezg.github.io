@@ -21,15 +21,17 @@ The motivation to test this metric, is that if a QB does his receiver progressio
 
 ### Calculating Pass ratio for NFL :
 
-As mentioned before, the Pass Ratio is a way to measure network centrality at a game level. This metric has a value between 0 and 1. I calculated PR in football the following way:
+As mentioned before, the Pass Ratio is a way to measure network centrality at a game level. This metric is calculated by counting the number of times of a player received the ball. We find who received the ball the most, and use his reception number as the game max. We then calculate the difference in passes by subtractig each players passing count from the game max. We average the differences of all players, and finally divide them by the total number of passes completed in the day.  This will result in a number ranging between 0 and 1.
 
 <p><br></p>
-\\(PR = \frac{\sum_{i=1}^{TP} maxPasses - passes_i}{Total Pases} \\)
+
+\\(MPD = \frac{\sum_{i=1}^{TP} maxPasses - passes_i}{TP} \\)
+\\(PR = \frac{MPD}{TotalPasses \\)
 <p><br></p>
 Where:
 * TP: total number of receivers who caught a pass during the game
 * maxPases: the highest number of passes thrown at one person during the game 
-* TotalPasseS: Total passes thrown by the QB
+* TotalPasses: Total passes thrown by the QB
 <p><br></p>
 
 If a QB throws at multiple targets in an even distribution, then team's pass ratio will be rather low. Alternatevely, if a QB, caves in to his diva WR and makes every pass to him, then that team will have a high PR.
