@@ -34,6 +34,12 @@ Where:
 * TotalPasses: Total passes thrown by the QB
 <p><br></p>
 
+For eaxmple: Dak throws to Dez 15 times, 10 times to Witten and 5 times to Beasley. Our calculations will go as this.
+
+\\( Mean Pass Diff = \frac{(15-15)+(15-10)+(15-5)}{3} = \frac{0+5+10}{3} = \frac{15}/{3}=5  \\)
+\\( \frac{5}{15+10+5} = \frac{5}{30} = 0.1666667
+\\(PR = 0.17 \\)
+
 If a QB throws at multiple targets in an even distribution, then team's pass ratio will be rather low. Alternatevely, if a QB, caves in to his diva WR and makes every pass to him, then that team will have a high PR.
 
 <br>
