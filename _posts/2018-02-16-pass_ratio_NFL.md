@@ -9,15 +9,19 @@ comments: true
 ---
 
 
-In this post, I'm testing a popular soccer metric, Pass Ratio (PR), with NFL passer/receiver data and I'll try to determine if this metric can help predict total air yards.  
+In this post, I'm testing a popular soccer metric, Pass Ratio (PR), with NFL passer/receiver data and I'll try to determine if this metric can help predict total air yards produced by an offense.  
 
-Pass Ratio was first developed by the mathematicion Thomas Grund. He used it to evaluate soccer matches and discovered that teams that focusEd their passing on a select few players usually scored less goals than teams who distributed their passes evenly. It is important to mark that in soccer, all players receive and pass the ball, while there are some players (center midfield) who tend to distribute the ball the most, all players are involved in passing. Football, as we know, only the QB passes the ball. Ocassionaly, a RB or a kicker may throw the ball on a trick play, but let's ingore those cases as they are not frequent.
+<br>
 
-The motivation to test this metric, is that if a QB does his receiver progressions well, and has multiple players able to open separate from their coverage, then that QB would be passing to multiple targets and possibly having a better offense. If a QB only trusts a select group of receivers , then the opposing Defense should be able to double cover those safety targets.
+Pass Ratio was first developed by the mathematicion Thomas Grund. He used it to evaluate soccer matches and discovered that teams that focused their passing on a select few players usually scored less goals than teams who distributed their passes evenly. It is important to note that soccer has a more complex pass network as all players receive and pass the ball. There are some players analogous to football's QB, who tend to distribute the ball the most (center midfield), but the rest of the team does their fair share of passing. Football, as we know, only the QB passes the ball. Ocassionaly, a RB or a kicker may throw the ball on a trick play, but let's ingore those cases as they are not frequent.
+
+<br>
+
+The motivation to test this metric, is that if a QB does his receiver progressions well, and has multiple players able to separate from their coverage, then that QB would be passing to multiple targets and possibly having a better offense. If a QB only trusts a select group of receivers , then the opposing defense should be able to double cover those safety targets and reduce the effectiveness of the offense.
 
 ### Calculating Pass ratio for NFL :
 
-As mentioned before, the Pass Ratio is a way to measure network centrality at a game level on a scale from 0-1. The way I calculated it is in the following
+As mentioned before, the Pass Ratio is a way to measure network centrality at a game level. This metric has a value between 0 and 1. I calculated PR in football the following way:
 
 <p><br></p>
 \\(PR = \frac{\sum_{i=1}^{TP} maxPasses - passes_i}{Total Pases} \\)
@@ -30,11 +34,11 @@ Where:
 
 If a QB throws at multiple targets in an even distribution, then team's pass ratio will be rather low. Alternatevely, if a QB, caves in to his diva WR and makes every pass to him, then that team will have a high PR.
 
-
+<br>
 
 ## Analysis
 
-Analysis is rather simple, just a linear regression with average pass ratio as the independent variable. I decided to compare PR to total pass yards, meaning air yards AND yards after completion. My argument, is that if a team distributes it's passes evenly throught receivers, then eventually a receiver will catch a pass and have plenty of room to run after the catch as the defense would be spread out accross the field.
+Analysis is rather simple, just a linear regression with PR as the independent variable, and Pass Yards as the dependent variable. I decided to compare PR to total pass yards, meaning air yards AND yards after completion. My argument, is that if a team distributes it's passes evenly throught receivers, then eventually a receiver will catch a pass and have plenty of room to run after the catch as the defense would be spread out accross the field.
 
 ### Game by Game 
 
@@ -116,7 +120,8 @@ Now, just for fun, I'll look at the residual fits.
 
 
 ## Conclusion
-At this point, I think continuing with this excersie is moot. While PR is a good predictor in soccer, it just doesn't transfer well to football. 
+At this point, I think continuing with this excersie is moot. While PR is a good predictor in soccer, it just doesn't transfer well to football. Perhaps, the ability of some WRs compensate and justify them getting more passes. Also, it might be the case that when you target different players evenly, you just don't have the super star WR. Either way, I'll remove PR form my key metrics.
 
 
-
+## Data Sources
+[nflscrapR - package](https://github.com/maksimhorowitz/nflscrapR)
