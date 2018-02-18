@@ -124,4 +124,4 @@ At this point, I think continuing with this excersie is moot. While PR is a good
 
 
 ## Data Sources
-[nflscrapR - package](https://github.com/maksimhorowitz/nflscrapR)
+[nflscrapR - package](https://github.com/maksimhorowitz/nflscrapR){:target="_blank"}
