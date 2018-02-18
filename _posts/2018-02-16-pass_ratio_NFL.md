@@ -49,8 +49,9 @@ Where:
 <p><br></p>
 
 \\(PR = 0.17 \\)
+<p><br></p>
 
-If a QB throws at multiple targets in an even distribution, then team's pass ratio will be rather low. Alternatevely, if a QB, caves in to his diva WR and makes every pass to him, then that team will have a high PR.
+If a QB throws at multiple targets in an even distribution, then his team's pass ratio will be rather low. Alternatevely, if a QB, caves in to his diva WR and makes every pass to him, then his team will have a high PR.
 
 <br>
 
