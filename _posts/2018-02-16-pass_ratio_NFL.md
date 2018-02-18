@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using a Pass Ratio Metric to predict Air Yard Performance (SPOILER: not a good metric)"
+title: "Using a Pass Ratio Metric to predict Pass Yards (SPOILER: not a good metric)"
 modified:
 excerpt: ""
 tags: [pass ratio, R, NFL]
