@@ -27,9 +27,9 @@ As mentioned before, the Pass Ratio is a way to measure network centrality at a 
 \\(PR = \frac{\sum_{i=1}^{TP} maxPasses - passes_i}{Total Pases} \\)
 <p><br></p>
 Where:
-\\( TP: total number of receivers who caught a pass during the game \\)
-\\( maxPases: the highest number of passes thrown at one person during the game \\)
-\\( TotalPasseS: Total passes thrown by the QB \\)
+* TP: total number of receivers who caught a pass during the game
+* maxPases: the highest number of passes thrown at one person during the game 
+* TotalPasseS: Total passes thrown by the QB
 <p><br></p>
 
 If a QB throws at multiple targets in an even distribution, then team's pass ratio will be rather low. Alternatevely, if a QB, caves in to his diva WR and makes every pass to him, then that team will have a high PR.
