@@ -27,6 +27,7 @@ As mentioned before, the Pass Ratio is a way to measure network centrality at a 
 
 \\(MPD = \frac{\sum_{i=1}^{TP} maxPasses - passes_i}{TP} \\)
 
+
 \\(PR = \frac{MPD}{TotalPasses \\)
 
 <p><br></p>
@@ -39,7 +40,7 @@ Where:
 
 For eaxmple: Dak throws to Dez 15 times, 10 times to Witten and 5 times to Beasley. Our calculations will go as this.
 
-\\( Mean Pass Diff = \frac{(15-15)+(15-10)+(15-5)}{3} = \frac{0+5+10}{3} = \frac{15}/{3}=5  \\)
+\\( Mean Pass Diff = \frac{(15-15)+(15-10)+(15-5)}{3} = \frac{0+5+10}{3} = \frac{15}{3}=5  \\)
 
 \\( \frac{5}{15+10+5} = \frac{5}{30} = 0.1666667 \\)
 
