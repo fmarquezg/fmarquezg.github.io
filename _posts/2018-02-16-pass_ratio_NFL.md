@@ -34,32 +34,72 @@ If a QB throws at multiple targets in an even distribution, then team's pass rat
 
 ## Analysis
 
-Analysis is simple, just a linear regression with average pass ratio as the independent variable.
+Analysis is rather simple, just a linear regression with average pass ratio as the independent variable. I decided to compare PR to total pass yards, meaning air yards AND yards after completion. My argument, is that if a team distributes it's passes evenly throught receivers, then eventually a receiver will catch a pass and have plenty of room to run after the catch as the defense would be spread out accross the field.
+
+### Game by Game 
+
+By simply plotting the data, it is difficult to say there is a linear relation.
+
+<figure>
+     <img src="/images/nfl_passratio/game_lvl_pr.jpeg">
+    <figcaption></figcaption>
+</figure>
+
+R squared is essentailly 0.
 
 ```R
-lr_model<-lm(formula=total_wins~avg_pr,data=sum_game_w)
-summary(lr_model)
-
+>lr_model<-lm(formula=total_PassYards~ratio,data=game_pr
+>summary(lr_model)
 Call:
-lm(formula = total_wins ~ avg_pr, data = sum_game_w)
+lm(formula = total_PassYards ~ ratio, data = game_pr)
 
 Residuals:
-    Min      1Q  Median      3Q     Max 
--5.8728 -1.8706  0.4463  1.8161  4.9955 
+     Min       1Q   Median       3Q      Max 
+-208.684  -52.124   -2.148   51.195  269.528 
 
 Coefficients:
             Estimate Std. Error t value Pr(>|t|)    
-(Intercept)   20.546      5.164   3.979 0.000405 ***
-avg_pr      -252.860    102.760  -2.461 0.019843 *  
+(Intercept)  239.659      8.462  28.322   <2e-16 ***
+ratio        -29.750     50.094  -0.594    0.553   
+
+```
+
+
+### Test at Season Level
+
+PR at a game level is a horrible predictor. I still have hope though. Maybe game-by-game is too granular and PR should considered as an average metric. Maybe QBs/Receivers have bad days and catch the ball but cant transform them into yards.
+
+I grouped the data to represent mean(PR) and mean(Total Pass Yards).
+
+<figure>
+     <img src="/images/nfl_passratio/season_lvl_pr.jpeg">
+    <figcaption></figcaption>
+</figure>
+
+The trendline shows a positive relation, but we can easily tell it is a horrible fit.  Again, R squared is close to 0.
+
+```R
+> lr_model<-lm(formula=mtotal_yards~avg_pr,data=season_pr)
+> summary(lr_model)
+
+Call:
+lm(formula = mtotal_yards ~ avg_pr, data = season_pr)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-95.111 -28.045   7.228  31.253 109.802 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   180.02      23.67   7.605 3.85e-10 ***
+avg_pr        284.41     142.48   1.996   0.0509 .  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 3.01 on 30 degrees of freedom
-Multiple R-squared:  0.1679,	Adjusted R-squared:  0.1402 
-F-statistic: 6.055 on 1 and 30 DF,  p-value: 0.01984
+Residual standard error: 46.81 on 55 degrees of freedom
+Multiple R-squared:  0.06755,	Adjusted R-squared:  0.0506 
+F-statistic: 3.985 on 1 and 55 DF,  p-value: 0.05088
 ```
-
-While there is a negative slope, the R-squared value is too small.
 
 
 Looking at residual vs fitted plot, there is no distinctive pattern, so I'll it's safe to call this a linear relationship.
