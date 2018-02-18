@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-In this post, I'm testing a popular soccer metric, pass ratio, with NFL passer/receiver data and I'll try to determine if this metric can help predict total air yards.  
+In this post, I'm testing a popular soccer metric, Pass Ratio (PR), with NFL passer/receiver data and I'll try to determine if this metric can help predict total air yards.  
 
 Pass Ratio was first developed by the mathematicion Thomas Grund. He used it to evaluate soccer matches and discovered that teams that focusEd their passing on a select few players usually scored less goals than teams who distributed their passes evenly. It is important to mark that in soccer, all players receive and pass the ball, while there are some players (center midfield) who tend to distribute the ball the most, all players are involved in passing. Football, as we know, only the QB passes the ball. Ocassionaly, a RB or a kicker may throw the ball on a trick play, but let's ingore those cases as they are not frequent.
 
@@ -17,25 +17,20 @@ The motivation to test this metric, is that if a QB does his receiver progressio
 
 ### Calculating Pass ratio for NFL :
 
-Sum the number of passes to a player, then compare this to the number of passes made to most active player. 
-
-78-39 = avg this differences throught each game, and then divide by total number of passes
-
+As mentioned before, the Pass Ratio is a way to measure network centrality at a game level on a scale from 0-1. The way I calculated it is in the following
 
 <p><br></p>
-\\(PR = \frac{\sum_{i=1}^{total_players} maxPasses - passes_i}{total pases} \\)
+\\(PR = \frac{\sum_{i=1}^{TP} maxPasses - passes_i}{Total Pases} \\)
 <p><br></p>
 
 where:
+TP: total number of receivers who caught a pass during the game 
+maxPases: the highest number of passes thrown at one person during the game
+TotalPasse: Total passes thrown by the QB
 
 <p><br></p>
 
-\\( \beta X = \beta _{0} +\beta _{1}X _{per \, capita \, income} + \beta _{2}X _{median \, age}+\beta _{3}X _{total \, population}+\beta _{4}X _{total \, population \times median \, age} +\beta _{5}X _{per \, capita \, income \times median \, age}  \\)
-
-<p><br></p>
-
-
-AVG [ #passes to player_x / Total passes thrown ]
+If a QB throws at multiple targets in an even distribution, then team's pass ratio will be rather low. Alternatevely, if a QB, caves in to his diva WR and makes every pass to him, then that team will have a high PR.
 
 
 
