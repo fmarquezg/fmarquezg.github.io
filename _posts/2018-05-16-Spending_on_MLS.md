@@ -17,14 +17,14 @@ As we can see, there is a group of 7 clubs with heavy roasters. Toronto and NY C
 
 
 <figure>
-     <img src="/images/MLS_17/2017_club_base_salaries.jpeg">
+     <img src="/images/MLS_17/2017_club_base salaries.jpeg">
     <figcaption></figcaption>
 </figure>
 
 Quite remarkable is the fact that both Toronto and NY Cosmo belong to the Eastern Conference. In fact, the top 4 spenders belong to the Eastern Conference.  
 
 <figure>
-     <img src="/images/MLS_17/2017_club_conf_s.jpeg">
+     <img src="/images/MLS_17/2017_club_conf_spend.jpeg">
     <figcaption></figcaption>
 </figure>
 
