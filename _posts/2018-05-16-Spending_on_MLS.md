@@ -16,13 +16,24 @@ To keep this analysis simple, I'm going to focus on Base Salaries only and ignor
 As we can see, there is a group of 7 clubs with heavy roasters. Toronto and NY Cosmo in particular seem to be on a league of their own.
 
 
-<PIC>
+<figure>
+     <img src="/images/MLS_17/2017_club_base_salaries.jpeg">
+    <figcaption></figcaption>
+</figure>
 
 Quite remarkable is the fact that both Toronto and NY Cosmo belong to the Eastern Conference. In fact, the top 4 spenders belong to the Eastern Conference.  
 
+<figure>
+     <img src="/images/MLS_17/2017_club_conf_s.jpeg">
+    <figcaption></figcaption>
+</figure>
 
 At the bare minimum, clubs aim to make it to the Playoffs. Basically, you clubs have to end up in the top 4 of their conference in order to get a chance to win the championship.  
 
+<figure>
+     <img src="/images/MLS_17/2017_club_playoff_spend.jpeg">
+    <figcaption></figcaption>
+</figure>
 
 ### The Eastern Conference:
 
