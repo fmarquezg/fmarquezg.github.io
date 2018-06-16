@@ -41,6 +41,18 @@ To do so
 
 After extensive data manipulations, I create at table where 
 
+
+```{r}
+  name        actionSchool                 rank offer schoolCamp uvisit cvisit ovisit commits decommits in_state   won
+  <chr>       <fct>                       <dbl> <int>      <int>  <int>  <int>  <int>   <int>     <int>    <dbl> <int>
+1 Aaron Brule Cincinnati Bearcats           496     1          0      0      0      0       0         0        0     0
+2 Aaron Brule Georgia Bulldogs              496     1          0      1      0      0       1         1        0     0
+3 Aaron Brule Georgia Tech Yellow Jackets   496     1          0      0      0      0       0         0        0     0
+4 Aaron Brule Mississippi State Bulldogs    496     1          1      0      0      1       1         0        0     1
+5 Aaron Brule Oklahoma State Cowboys        496     1          0      0      0      1       0         0        0     0
+6 Aaron Brule TCU Horned Frogs              496     1          0      0      0      1       0         0        0     0
+```
+
 <p><br></p>
 
 \\( P( y =1 | X) = h_{\theta(X)} = \sigma(\theta^{T}X \\)
