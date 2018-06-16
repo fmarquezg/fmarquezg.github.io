@@ -48,7 +48,7 @@ After extensive data manipulations, I create at table where
 
 Where the logit is:
 <p><br></p>
-\\(logit[\pi(X)] = \Beta_{SC}X + \Beta_{oVisit}X+ \Beta_{uVisit}X+ \Beta_{cVisit}X+ \Beta_{inState}X \\)
+\\(logit[\pi(X)] = \betaX_{1}X_{SC} + \beta_{2}X_{oVisit}+ \beta_{3}X_{uVisit}+ \beta{4}X_{cVisit}+ \beta_{5}X_{inState} \\)
 
 In this case 
 
