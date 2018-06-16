@@ -43,12 +43,12 @@ After extensive data manipulations, I create at table where
 
 <p><br></p>
 
-\\( P( y =1 | X) = h_\theta(X)=  \sigma(\theta^T X \\)
+\\( P( y =1 | X) = h_{\theta(X)} = \sigma(\theta^{T}X \\)
 
 
 Where the logit is:
-
-\\(logit[\pi(X)] = \Beta_SC X + \Beta_oVisit X+ \Beta_uVisit X+ \Beta_cVisit X+ \Beta_inState X \\)
+<p><br></p>
+\\(logit[\pi(X)] = \Beta_{SC}X + \Beta_{oVisit}X+ \Beta_{uVisit}X+ \Beta_{cVisit}X+ \Beta_{inState}X \\)
 
 In this case 
 
