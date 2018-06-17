@@ -51,6 +51,24 @@ After extensive data manipulations, I create at table where each row represents 
 <p><br></p>
 
 
+### The Method
+
+I'm going to use a Logistic Regression Model, which would output the probability of a recruit commiting to a School. 
+
+
+\\( P(y =1|X) = h_{\theta(X)} = \sigma(\theta^{T}X \\)
+
+Where the logit is:
+
+<p><br></p>
+\\(logit[\pi(X)] = \beta{1}X_{SC} + \beta_{2}X_{oVisit}+ \beta_{3}X_{uVisit}+ \beta{4}X_{cVisit}+ \beta_{5}X_{inState} \\)
+
+<p><br></p>
+
+I will begin with a general School agnostic model, and then move to a different model, where I compare Georgia, Ohio State, Texas, USC, Clemson, Penn State, Alabama, and Oklahoma. The top 8 recruiting classes of 2018.
+
+
+
 ### The Prediction
 
 
@@ -59,7 +77,7 @@ In this first part, I'm going to see if we can accurately predict where a recrui
 
 ```{r}
 model <-glm(won~rank+schoolCamp+uvisit+cvisit+ovisit+in_state,
-            family=binomial(link='logit'),data=recruitX,
+            family=binomial(link='logit'),data=training,
             control = list(maxit = 50))
 summary(model)
                         
@@ -69,39 +87,39 @@ summary(model)
 ```{r}
 Call:
 glm(formula = won ~ rank + schoolCamp + uvisit + cvisit + ovisit + 
-    in_state, family = binomial(link = "logit"), data = recruitX, 
+    in_state, family = binomial(link = "logit"), data = training, 
     control = list(maxit = 50))
 
 Deviance Residuals: 
     Min       1Q   Median       3Q      Max  
--3.0863  -0.1801  -0.1314  -0.1018   3.2537  
+-2.8487  -0.1834  -0.1303  -0.0996   3.2661  
 
 Coefficients:
-              Estimate Std. Error z value Pr(>|z|)    
-(Intercept) -5.6007843  0.1491958 -37.540  < 2e-16 ***
-rank         0.0018943  0.0001954   9.695  < 2e-16 ***
-schoolCamp   0.3327211  0.1557867   2.136   0.0327 *  
-uvisit       0.3453559  0.0426382   8.100 5.51e-16 ***
-cvisit      -0.0388794  0.0822575  -0.473   0.6365    
-ovisit       4.2866280  0.1148228  37.333  < 2e-16 ***
-in_state     1.2392349  0.1376934   9.000  < 2e-16 ***
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -5.664591   0.194973 -29.053  < 2e-16 ***
+rank         0.002035   0.000254   8.013 1.12e-15 ***
+schoolCamp   0.276454   0.196053   1.410    0.159    
+uvisit       0.339349   0.053661   6.324 2.55e-10 ***
+cvisit       0.035264   0.105592   0.334    0.738    
+ovisit       4.314356   0.149008  28.954  < 2e-16 ***
+in_state     1.392162   0.178340   7.806 5.89e-15 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for binomial family taken to be 1)
 
-    Null deviance: 5217.9  on 11799  degrees of freedom
-Residual deviance: 2634.6  on 11793  degrees of freedom
-AIC: 2648.6
+    Null deviance: 3154.1  on 7079  degrees of freedom
+Residual deviance: 1578.3  on 7073  degrees of freedom
+AIC: 1592.3
 
 Number of Fisher Scoring iterations: 7
                         
 ```
 
-```{r}
-anova(model,test="Chisq")                     
-```
+The output of thre regression, tells us Official visits have a huge impact on a recruit's decision. In State appears to be runner up, which makes sense as we know players want to stay close to their families. Coach Visits and School camps seem to have an impact in the recruiting process. This is schocking to me, I thought coaches visiting players would be a strong factor.
 
+
+Next we analyse how factors reduce variance. In this case, the official visit factor comes out as a very strong indicator. 
 ```{r}
 Analysis of Deviance Table
 
@@ -124,19 +142,25 @@ in_state    1    78.30     11793     2634.6 < 2.2e-16 ***
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1                   
 ```
 
+Now the question.. how good is this model? Overall, accuracy is at 95.66%, but I must admit this data is heavily skewed towards not winning a recruit.
+
+```{r}
+predict<-predict(model,testing,type='response')
+table(testing$won, predict > 0.5)
+```
+
+```{r}
+    FALSE TRUE
+  0  4374   77
+  1   128  141   
+```
 
 
 
 
-\\( P( y =1 | X) = h_{\theta(X)} = \sigma(\theta^{T}X \\)
 
 
-Where the logit is:
 
-<p><br></p>
-\\(logit[\pi(X)] = \beta{1}X_{SC} + \beta_{2}X_{oVisit}+ \beta_{3}X_{uVisit}+ \beta{4}X_{cVisit}+ \beta_{5}X_{inState} \\)
-
-<p><br></p>
 
 
 
