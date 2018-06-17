@@ -75,13 +75,13 @@ I will begin with a general School agnostic model, and then move to a different 
 In this first part, I'm going to see if we can accurately predict where a recruit will enroll based on how a school as interacted with him. Based on the sheer number of offers a recruit gets, our accuracy to be low, but we'll refine our approach next.
 
 
-```{r}
+{% highlight R %}
 model <-glm(won~rank+schoolCamp+uvisit+cvisit+ovisit+in_state,
             family=binomial(link='logit'),data=training,
             control = list(maxit = 50))
 summary(model)
                         
-```
+{% endhighlight %}
 
 
 ```{r}
