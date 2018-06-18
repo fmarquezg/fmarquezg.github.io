@@ -76,9 +76,10 @@ In this first part, I'm going to see if we can accurately predict where a recrui
 
 
 {% highlight R %}
-model <-glm(won~rank+schoolCamp+uvisit+cvisit+ovisit+in_state,
+model <-glm(won~schoolCamp+uvisit+cvisit+ovisit+in_state,
             family=binomial(link='logit'),data=training,
             control = list(maxit = 50))
+
 summary(model)
                         
 {% endhighlight %}
@@ -86,38 +87,34 @@ summary(model)
 
 ```{r}
 Call:
-glm(formula = won ~ rank + schoolCamp + uvisit + cvisit + ovisit + 
-    in_state, family = binomial(link = "logit"), data = training, 
-    control = list(maxit = 50))
+glm(formula = won ~ schoolCamp + uvisit + cvisit + ovisit + in_state, 
+    family = binomial(link = "logit"), data = training, control = list(maxit = 50))
 
 Deviance Residuals: 
     Min       1Q   Median       3Q      Max  
--2.8487  -0.1834  -0.1303  -0.0996   3.2661  
+-2.8262  -0.1343  -0.1343  -0.1343   3.0703  
 
 Coefficients:
-             Estimate Std. Error z value Pr(>|z|)    
-(Intercept) -5.664591   0.194973 -29.053  < 2e-16 ***
-rank         0.002035   0.000254   8.013 1.12e-15 ***
-schoolCamp   0.276454   0.196053   1.410    0.159    
-uvisit       0.339349   0.053661   6.324 2.55e-10 ***
-cvisit       0.035264   0.105592   0.334    0.738    
-ovisit       4.314356   0.149008  28.954  < 2e-16 ***
-in_state     1.392162   0.178340   7.806 5.89e-15 ***
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -4.70429    0.12495 -37.648  < 2e-16 ***
+schoolCamp   0.52197    0.18353   2.844  0.00445 ** 
+uvisit       0.23327    0.05058   4.612 3.99e-06 ***
+cvisit      -0.13102    0.08994  -1.457  0.14518    
+ovisit       4.22311    0.14542  29.040  < 2e-16 ***
+in_state     1.29659    0.17052   7.604 2.88e-14 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for binomial family taken to be 1)
 
-    Null deviance: 3154.1  on 7079  degrees of freedom
-Residual deviance: 1578.3  on 7073  degrees of freedom
-AIC: 1592.3
+    Null deviance: 3143  on 7079  degrees of freedom
+Residual deviance: 1620  on 7074  degrees of freedom
+AIC: 1632
 
-Number of Fisher Scoring iterations: 7
-                        
+Number of Fisher Scoring iterations: 7                     
 ```
 
-The output of thre regression, tells us Official visits have a huge impact on a recruit's decision. In State appears to be runner up, which makes sense as we know players want to stay close to their families. Coach Visits and School camps seem to have an impact in the recruiting process. This is schocking to me, I thought coaches visiting players would be a strong factor.
-
+The output of thre regression...
 
 Next we analyse how factors reduce variance. In this case, the official visit factor comes out as a very strong indicator. 
 ```{r}
@@ -131,18 +128,17 @@ Terms added sequentially (first to last)
 
 
            Df Deviance Resid. Df Resid. Dev  Pr(>Chi)    
-NULL                       11799     5217.9              
-rank        1    38.57     11798     5179.3 5.296e-10 ***
-schoolCamp  1   214.83     11797     4964.5 < 2.2e-16 ***
-uvisit      1   394.53     11796     4570.0 < 2.2e-16 ***
-cvisit      1    39.80     11795     4530.2 2.814e-10 ***
-ovisit      1  1817.28     11794     2712.9 < 2.2e-16 ***
-in_state    1    78.30     11793     2634.6 < 2.2e-16 ***
+NULL                        7079     3143.0              
+schoolCamp  1   148.13      7078     2994.9 < 2.2e-16 ***
+uvisit      1   218.73      7077     2776.2 < 2.2e-16 ***
+cvisit      1    21.46      7076     2754.7 3.621e-06 ***
+ovisit      1  1078.37      7075     1676.3 < 2.2e-16 ***
+in_state    1    56.36      7074     1620.0 6.037e-14 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1                   
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1                
 ```
 
-Now the question.. how good is this model? Overall, accuracy is at 95.66%, but I must admit this data is heavily skewed towards not winning a recruit.
+Now the question.. how good is this model? Overall, accuracy is at 95.56%, but I must admit this data is heavily skewed towards not winning a recruit.
 
 ```{r}
 predict<-predict(model,testing,type='response')
@@ -151,22 +147,9 @@ table(testing$won, predict > 0.5)
 
 ```{r}
     FALSE TRUE
-  0  4374   77
-  1   128  141   
+  0  5486   44
+  1   218  152
 ```
-
-
-
-
-
-
-
-
-
-
-<
-
-
 
 
 Finally, I'm going to add School weights to see if schools take advantage of features. Particularly, I'm intereted in seeing if a School does a better job at keeping in-state talent, or if schools wow their prospects during their visists. 
