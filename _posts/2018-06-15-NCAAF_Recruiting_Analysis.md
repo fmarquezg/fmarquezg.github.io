@@ -90,7 +90,7 @@ After extensive data manipulations, I create at table where each row represents 
 I'm going to use a Logistic Regression Model, which would output the probability of a recruit commiting to a School. 
 
 
-\\(P = h_{\theta(X)} = \sigma(\theta^{T})X \\)
+\\(P[y=1|X] = h_{\theta(X)} = \sigma(\theta^{T})X \\)
 
 Where the logit is:
 
