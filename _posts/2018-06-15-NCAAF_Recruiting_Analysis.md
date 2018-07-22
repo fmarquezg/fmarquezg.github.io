@@ -10,11 +10,40 @@ comments: true
 
 Recruiting is the essence of College Football. 
 
+Recruiting is probably the one of the most important factors, if not the most important factor that determines how good a season will be. With this in mind, I dug up some data from <a href="https://247sports.com/Season/2018-Football/" target="_blank">247Sports</a>.  to see if we could use public recruiting event data to see if we could predict where a player was committing to, or at the very least see if a school of (my) interest was doing a good job at recruiting.    
+
 
 
 In this analysis I'm pulled the player timeline records from <a href="https://247sports.com/Season/2018-Football/" target="_blank">247Sports</a>. 
 
-Georgio, Ohio State, Texas, South California, and Clemson finished in the top 5. Basing myself exclusively in the data available in this site, I 
+On average, recruits receive 13 offers. As we would expect, the higher the recruit is ranked, the more offers he might receive. In the chart below I grouped recruits by 100s according to their rank. 
+
+<figure>
+     <img src="/images/recruiting2018/Tier_offers.jpeg">
+    <figcaption></figcaption>
+</figure>
+
+The offer letter isn't the only event. There are coaches visiting the student, students attending summer camps, and students visiting schools both officialy and unofficialy. 
+
+<figure>
+     <img src="/images/recruiting2018/Tier_events.jpeg">
+    <figcaption></figcaption>
+</figure>
+
+
+
+Looking back at the 2018 class, Clemson, Georgia, Ohio State, Texas and USC finished in the top 5. 
+
+<figure>
+     <img src="/images/recruiting2018/School_events.jpeg">
+    <figcaption></figcaption>
+</figure>
+
+Georgio putting 200+ offers is suspicious... let's look into that 
+
+
+
+
 
 
 Recruiting events tracked are:
