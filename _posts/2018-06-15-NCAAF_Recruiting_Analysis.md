@@ -100,14 +100,8 @@ Where the logit is:
 
 <p><br></p>
 
-I will begin with a general School agnostic model, and then move to a different model, where I compare Georgia, Ohio State, Texas, USC, Clemson, Penn State, Alabama, and Oklahoma. The top 8 recruiting classes of 2018.
-
-
 
 ### The Prediction
-
-
-In this first part, I'm going to see if we can accurately predict where a recruit will enroll based on how a school as interacted with him. Based on the sheer number of offers a recruit gets, our accuracy to be low, but we'll refine our approach next.
 
 
 {% highlight R %}
@@ -149,29 +143,7 @@ AIC: 1632
 Number of Fisher Scoring iterations: 7                     
 ```
 
-The output of thre regression...
-
-Next we analyse how factors reduce variance. In this case, the official visit factor comes out as a very strong indicator. 
-```{r}
-Analysis of Deviance Table
-
-Model: binomial, link: logit
-
-Response: won
-
-Terms added sequentially (first to last)
-
-
-           Df Deviance Resid. Df Resid. Dev  Pr(>Chi)    
-NULL                        7079     3143.0              
-schoolCamp  1   148.13      7078     2994.9 < 2.2e-16 ***
-uvisit      1   218.73      7077     2776.2 < 2.2e-16 ***
-cvisit      1    21.46      7076     2754.7 3.621e-06 ***
-ovisit      1  1078.37      7075     1676.3 < 2.2e-16 ***
-in_state    1    56.36      7074     1620.0 6.037e-14 ***
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1                
-```
+From the coefficients above, we can see why coaches (and fans mostly) get excited when recruits do official visits. This is not too surprising as the NCAA only allows 5 official visits per student. Unofficial visits are good indicators as well, althought they are not quite as strong. Summer Camps on the other hand seem to be very effective in the recruiting journey. Also interesting to me is the strength of the in_state coefficient. As a Texas fan I've heard much talk about keeping in state athletes home. The fact that this is the second strongest coefficient shows Texas isn't the only school emphasizing on this point.  
 
 Now the question.. how good is this model? Overall, accuracy is at 95.56%, but I must admit this data is heavily skewed towards not winning a recruit.
 
@@ -185,8 +157,3 @@ table(testing$won, predict > 0.5)
   0  5486   44
   1   218  152
 ```
-
-
-Finally, I'm going to add School weights to see if schools take advantage of features. Particularly, I'm intereted in seeing if a School does a better job at keeping in-state talent, or if schools wow their prospects during their visists. 
-
-To do this, I'm changing the original equation so that it looks like this...
