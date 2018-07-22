@@ -30,6 +30,8 @@ The offer letter isn't the only event. There are coaches visiting the student, s
     <figcaption></figcaption>
 </figure>
 
+MEAN
+2.32 School Visits, 6.19 Unoficial Visits, 1.97 Official Visits, 3.04 Coach Visits
 
 
 Looking back at the 2018 class, Clemson, Georgia, Ohio State, Texas and USC finished in the top 5. 
@@ -39,12 +41,12 @@ Looking back at the 2018 class, Clemson, Georgia, Ohio State, Texas and USC fini
     <figcaption></figcaption>
 </figure>
 
-Georgio putting 200+ offers is suspicious... let's look into that 
+Georgia putting 200+ offers is the first thing that I noticed. UGA dropped over 200 offers when the average of the remianing Top 5 schools was 100. So much for  OKG (Our Kind of Guy) for Coach Kirk huh. Second thing I noticed was Ohio State dominating in getting recruits to their campus on visits and School camps. 
 
 
 
 
-
+Using this information, how well can schools predict if a recruit is commiting?
 
 Recruiting events tracked are:
 
@@ -53,15 +55,7 @@ Recruiting events tracked are:
 3. Unofficial Visit
 4. Official Visit
 5. Coach Visit
-6. Decommit
 
-
-On average, recruits received 12.7 offers. As the plot below shows, the offer count seems to be all over the place.
-
-2.32 School Vistis, 6.19 Unoficial Visits, 1.97 Official Visits, 3.04 Coach Visits, 
-
-
-Using this information, how well can schools predict if a recruit is commiting?
 
 After extensive data manipulations, I create at table where each row represents a unique recruit and school that interacted with him. The metric columns (other than rank, in_state, and won) are the sum of events.
 
