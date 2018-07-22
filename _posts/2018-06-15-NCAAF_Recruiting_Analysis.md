@@ -8,13 +8,13 @@ modified: 2018-06-5
 comments: true
 ---
 
-Recruiting is the essence of College Football. 
-
-Recruiting is probably the one of the most important factors, if not the most important factor that determines how good a season will be. With this in mind, I dug up some data from <a href="https://247sports.com/Season/2018-Football/" target="_blank">247Sports</a>.  to see if we could use public recruiting event data to see if we could predict where a player was committing to, or at the very least see if a school of (my) interest was doing a good job at recruiting.    
+ 
 
 
+Recruiting is the essence of College Football. It is one of the most important factors, if not the most important factor that determines how good a season will be. With this in mind, I dug up some data from <a href="https://247sports.com/Season/2018-Football/" target="_blank">247Sports</a> to see if we could use public recruiting event data to see if we could predict where a player was committing to, or at the very least see if a school of (my) interest was doing a good job at recruiting.    
 
-In this analysis I'm pulled the player timeline records from <a href="https://247sports.com/Season/2018-Football/" target="_blank">247Sports</a>. 
+
+## Summary of 2018 Recruiting
 
 On average, recruits receive 13 offers. As we would expect, the higher the recruit is ranked, the more offers he might receive. In the chart below I grouped recruits by 100s according to their rank. 
 
@@ -23,7 +23,9 @@ On average, recruits receive 13 offers. As we would expect, the higher the recru
     <figcaption></figcaption>
 </figure>
 
-The offer letter isn't the only event. There are coaches visiting the student, students attending summer camps, and students visiting schools both officialy and unofficialy. 
+
+During the recruiting process, students get invited to schools (both officially and unofficialy), coaches visit students, and studentets attend summer camps. There are other events in the process but these 4 are the most consistent events documented in our source. So This analysis will be based on just those.
+
 
 <figure>
      <img src="/images/recruiting2018/Tier_events.jpeg">
@@ -33,22 +35,31 @@ The offer letter isn't the only event. There are coaches visiting the student, s
 MEAN
 2.32 School Visits, 6.19 Unoficial Visits, 1.97 Official Visits, 3.04 Coach Visits
 
+As we can see, the top 100 tend to get the most love, but that doesn't mean a ranked 999 recruit doesn't get any attention. 
+
+
+
+## Top FIVE Schools
 
 Looking back at the 2018 class, Clemson, Georgia, Ohio State, Texas and USC finished in the top 5. 
+
 
 <figure>
      <img src="/images/recruiting2018/School_events.jpeg">
     <figcaption></figcaption>
 </figure>
 
-Georgia putting 200+ offers is the first thing that I noticed. UGA dropped over 200 offers when the average of the remianing Top 5 schools was 100. So much for  OKG (Our Kind of Guy) for Coach Kirk huh. Second thing I noticed was Ohio State dominating in getting recruits to their campus on visits and School camps. 
+
+Georgia putting 200+ offers is the first thing that I noticed. UGA dropped over 200 offers when the average of the remianing Top 5 schools was 100. So much for OKG (Our Kind of Guy) for Coach Kirby huh. Second thing I noticed was Ohio State dominating in getting recruits to their campus on visits and School camps. 
 
 
 
 
-Using this information, how well can schools predict if a recruit is commiting?
+## Modeling 
 
-Recruiting events tracked are:
+Using the recruiting event data, let's see if we can create a model to help us gauge where a recruit will end up playing.
+
+Again, the recruiting events tracked are:
 
 1. Offer
 2. School Camp
