@@ -157,3 +157,48 @@ table(testing$won, predict > 0.5)
   0  5486   44
   1   218  152
 ```
+
+As the last part of this analysis, I tried using the top 5 school (Texas, Georgia, USC, OSU, and Clemson) to see if they carried could help improve the regression analysis. Unfortunatley after several hours of feature engineering I couldn't improve the model. 
+
+
+The simplest regression including schools as factors, shows Texas is the only school that can brag about being a significant factor. 
+
+```{r}
+> summary(model)
+
+Call:
+glm(formula = won ~ schoolCamp + uvisit + ovisit + in_state + 
+    TEX + USC + CLE + OSU + GA, family = binomial(link = "logit"), 
+    data = training, control = list(maxit = 50))
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-3.3269  -0.1288  -0.1288  -0.1288   3.0969  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -4.78724    0.12926 -37.035  < 2e-16 ***
+schoolCamp   0.36336    0.18779   1.935   0.0530 .  
+uvisit       0.27680    0.05157   5.368 7.98e-08 ***
+ovisit       4.23948    0.14461  29.317  < 2e-16 ***
+in_state     1.26161    0.17415   7.245 4.34e-13 ***
+TEX          1.10482    0.45379   2.435   0.0149 *  
+USC         -0.11298    0.55735  -0.203   0.8394    
+CLE          0.62129    0.54551   1.139   0.2547    
+OSU          0.76816    0.46793   1.642   0.1007    
+GA           0.01940    0.41965   0.046   0.9631    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 3165.2  on 7079  degrees of freedom
+Residual deviance: 1588.7  on 7070  degrees of freedom
+AIC: 1608.7
+
+Number of Fisher Scoring iterations: 7
+```
+
+### Conclusion
+
+Recruiting is tough for both recruits and schools (and fans!). Predicting where a player will commit and enroll is perhaps just as tough. I do think Texas is doing an outstanding job at recruiting, and unlike Georgia, Texas is being selective in who gets an offer. The idea of getting the best players from within the state worked well for the Texas 2018 recruiting class. However, not all states are as big as Texas, and not all states have the same football talent as Texas so it might be hard for other schools copy this model and be succesful. 
