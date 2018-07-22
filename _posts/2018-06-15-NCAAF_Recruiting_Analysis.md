@@ -93,6 +93,8 @@ I'm going to use a Logistic Regression Model, which would output the probability
 \\( P( y = 1 | X) = h_{\theta(X)} = \sigma(\theta^{T}) X \\)
 
 \\( P( k > 0 | Y= 1) =  \\)
+
+
 Where the logit is:
 
 <p><br></p>
