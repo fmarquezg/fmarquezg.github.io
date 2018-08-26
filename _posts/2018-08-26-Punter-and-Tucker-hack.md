@@ -61,11 +61,11 @@ Justin Tucker, a fantasy favorite, missed only 3 field goald in 2017, 2 of those
 
 <br>
 
-So quick math... if the Ravens/Seahawks start from their 17th, move the ball at least 43 yards they will walk away with at least 3 points.
+So quick math... if the Ravens/Seahawks start from their 17th and move the ball at least 43 yards, they will walk away with at least 3 points.
 
 <br>
 
-Okay, maybe teaming up Punter and Tucker won't be the ultimate hack that will break the NFL, BUT it could cut some slack on both sides of the ball.  After all, a good punt does increases the chances of a forced punt, and moving the ball 40 yards shouldn't be too hard.
+Okay, maybe teaming up Punter and Tucker won't be the ultimate hack that will break the NFL, BUT it could cut some slack on both sides of the ball.  After all, a good punt does increases the chances of a forced punt, and moving the ball 40 yards shouldn't be too hard on the offense.
 
 <br>
 
