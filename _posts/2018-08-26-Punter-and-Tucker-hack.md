@@ -13,21 +13,21 @@ Punter (aka Michael Dickson) is showing spectacular punting skills by pinning te
 
 <br>
 
-Using <a href="https://github.com/ryurko/nflWAR" target="_blank">nflWAR's</a> 2017 data I got a solid idea of how effective and realistic this strategy could be.
+Using <a href="https://github.com/ryurko/nflWAR" target="_blank"> nflWAR </a> 2017 data I got a solid idea of how effective and realistic this strategy could be.
 
 ## Drive Outcomes
 
 Most drives end up in punts. During the 2017 season, 53% of drives ended in punts.
 
-<p> 
 <figure>
      <img src="/images/punter/outcome_plot.png" width="500" height="100">
     <figcaption></figcaption>
 </figure>
 
-The interesting part is, drives starting within the own 15th yard line ended in punts **63%** of the time. This is 10% more than the average punt frequency! 
+The interesting part is, drives starting within the own 15th yard line ended in punts _63%_ of the time. This is 10% more than the average punt frequency! 
 
 <br>
+
 
 ## Getting out of the red Zone
 
