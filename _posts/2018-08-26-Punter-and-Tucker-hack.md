@@ -20,9 +20,24 @@ Most drives end up in punts. During the 2017 season, 53% of drives ended in punt
     <figcaption></figcaption>
 </figure>
 
-Drives starting within the own 15th yard line ended in punts 63% of the time.
+Drives starting within the own 15th yard line ended in punts *63%* of the time.
 
 Those teams who ended up punting, traveled an average of 26 yards
+
+## The Average Punt
+
+Drives starting from own 15, traveled on average 26 yards before having to punt. These punts travelled on average 41 effective yards (effective yards = punt distance - return yards +/-penalty yards). 
+
+<p> 
+<figure>
+     <img src="/images/recruiting2018/Tier_offers.jpeg">
+    <figcaption></figcaption>
+</figure>
+     
+
+## Yards needed for J Tucker to score
+
+Adding the 26 travel yards and the 42 effective punt yards to the initial position (15) we end up in our own 17th yard. 
 
 
 
