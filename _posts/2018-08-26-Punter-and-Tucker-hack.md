@@ -16,7 +16,7 @@ Most drives end up in punts. During the 2017 season, 53% of drives ended in punt
 
 <p> 
 <figure>
-     <img src="/images/punter/outcome_plot.png">
+     <img src="/images/punter/outcome_plot.png" width="200" height="40">
     <figcaption></figcaption>
 </figure>
 
@@ -30,7 +30,7 @@ Drives starting from own 15, traveled on average 26 yards before having to punt.
 
 <p> 
 <figure>
-     <img src="/images/punter/effective_punt.png">
+     <img src="/images/punter/effective_punt.png" width="100" height="100">
     <figcaption></figcaption>
 </figure>
      
@@ -39,7 +39,7 @@ Drives starting from own 15, traveled on average 26 yards before having to punt.
 
 Adding the 26 travel yards and the 42 effective punt yards to the initial position (15) we end up in our own 17th yard. 
 
-<p> 
+
 <figure>
      <img src="/images/punter/justin_tucker_goals.png">
     <figcaption></figcaption>
@@ -50,5 +50,9 @@ Adding the 26 travel yards and the 42 effective punt yards to the initial positi
 
 To add 3 points on the board, the offense need to place the ball between the opposing team's 30th and 40th yard line. 
 
-<iframe src="https://giphy.com/embed/ToMjGpKniGqRNLGBrhu" width="480" height="256" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/jim-carrey-dumb-and-dumber-so-youre-telling-me-theres-a-chance-ToMjGpKniGqRNLGBrhu">via GIPHY</a></p>
+
+<br>
+<br>
+
+<iframe src="https://giphy.com/embed/ToMjGpKniGqRNLGBrhu" width="480" height="256" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/jim-carrey-dumb-and-dumber-so-youre-telling-me-theres-a-chance-ToMjGpKniGqRNLGBrhu"></a></p>
  
