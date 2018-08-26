@@ -50,5 +50,5 @@ Adding the 26 travel yards and the 42 effective punt yards to the initial positi
 
 To add 3 points on the board, the offense need to place the ball between the opposing team's 30th and 40th yard line. 
 
-
+<iframe src="https://giphy.com/embed/ToMjGpKniGqRNLGBrhu" width="480" height="256" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/jim-carrey-dumb-and-dumber-so-youre-telling-me-theres-a-chance-ToMjGpKniGqRNLGBrhu">via GIPHY</a></p>
  
