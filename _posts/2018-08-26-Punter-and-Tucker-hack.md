@@ -16,7 +16,7 @@ Most drives end up in punts. During the 2017 season, 53% of drives ended in punt
 
 <p> 
 <figure>
-     <img src="/images/recruiting2018/Tier_offers.jpeg">
+     <img src="/images/punter/outcome_plot.png">
     <figcaption></figcaption>
 </figure>
 
@@ -30,7 +30,7 @@ Drives starting from own 15, traveled on average 26 yards before having to punt.
 
 <p> 
 <figure>
-     <img src="/images/recruiting2018/Tier_offers.jpeg">
+     <img src="/images/punter/effective_punt.png">
     <figcaption></figcaption>
 </figure>
      
@@ -39,6 +39,11 @@ Drives starting from own 15, traveled on average 26 yards before having to punt.
 
 Adding the 26 travel yards and the 42 effective punt yards to the initial position (15) we end up in our own 17th yard. 
 
+<p> 
+<figure>
+     <img src="/images/punter/justin_tucker_goals.png">
+    <figcaption></figcaption>
+</figure>
 
 
 
