@@ -3,7 +3,7 @@ layout: post
 title: "Dickson and Tucker in a team might be the ultimate NFL hack!"
 modified:
 excerpt: ""
-tags: [NFL, R, RevolUTion]
+tags: [NFL, R, Punter]
 modified: 2018-08-26
 comments: false
 ---
@@ -13,7 +13,7 @@ Punter (aka Michael Dickson) is showing spectacular punting skills by pinning te
 
 <br>
 
-Using nflWAR's 2017 data I'll see and see how effective this strategy would be.
+Using <a href="https://github.com/ryurko/nflWAR" target="_blank">nflWAR's</a> 2017 data I got a solid idea of how effective and realistic this strategy could be.
 
 ## Drive Outcomes
 
