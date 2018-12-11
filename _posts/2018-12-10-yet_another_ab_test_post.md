@@ -70,10 +70,11 @@ In this example, had we ended our experiment the moment the p-value crossed the 
 Collect N samples and DON'T PEEK until the experiment concludes.
 
 # Sample Size
+<p>
+\\(n = 16 \frac{\sigma^{2}}{\delta^2}\\)
+</p>
 
-\\(n = 16 \frac{\sigma^{2}}{\delta^2})\\)
-
-where (\\ \delta\\) is the minimum effect we wish to detect. Note that the smaller the effect you wish to detect, the larger your sample should be. Also, having a large sample variance, will result in a large sample size needed.
+Where \\( \delta\\) is the minimum effect we wish to detect. Note that the smaller the effect you wish to detect, the larger your sample should be. Also, having a large sample variance, will result in a large sample size needed.
 
 If you're an R user you can use the following to get a sample size:
 
