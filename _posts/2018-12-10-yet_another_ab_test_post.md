@@ -9,9 +9,13 @@ comments: false
 ---
 
 
-I'm not trying to fed a fed horse (I had to) with this post, but there's nothing more dangerous than drawing conclusions from a poorly excecuted AB test. So I'm gonna post a quick tutorial on how to design and experiment and explain the reason behind each step.
+I'm not trying to feed a fed horse (I had to) with this post, but there's nothing more dangerous than drawing conclusions from a poorly excecuted AB test. This post is will detail the factors to consider when designing an AB Test and the reasoning behind each factor.
 
 <br>
+
+## Null Hypothesis (\\(H_{0})\\)
+Coming up with a hypothesis to test is the arguably the most important part of an experimint. There is nothing to test without a hypothesis. The Hypothesis we seek to reject is the Null Hypothesis. A common \\(H_{0})\\ for AB tests is \\(\mu_{A}=\mu_{B}=)\\. Which states the mean of sample A is equal to the mean of sample B.
+
 
 ## p-value
 The p-value is a powerful statistic that can be interpreted as the probability of an event equal to or more extreme than the observed one occurring when the Null Hypothesis (\\(H_{0})\\) is TRUE. We tend to reject the Null Hypothesis (\\(H_{0})\\) when the computed p-value is lower than 0.05 because the event is very unlikely to occur.
@@ -21,7 +25,6 @@ It is very common to see people run A/B tests and draw conclusions based on weth
 
 ## Example
 Imagine you want to test whether a coin is fair or not. You flip a coin 10000 times and say you measure the number of times the coin landed in Heads. Using the `binom.test` R function we check the p-value for when our (\\(H_{0}) = 0.5 \\). If the coin is fair, we should observer a large p-value.
-
 
 
 
@@ -61,9 +64,31 @@ for (i in 5:n){
 ```
 
 In this example, had we ended our experiment the moment the p-value crossed the 0.05 threhhold, we would wrongfully concluded the coin is biased. 
-
+ 
 ### Solution:
-Collect N samples and DON'T PEAK until the experiment concludes.
+Collect N samples and DON'T PEEK until the experiment concludes.
 
-To be Continued...
+# Sample Size
+
+\\n = 16 \frac{\sigma^{2}}{\delta^2})\\
+
+where (\\ \delta\\) is the minimum effect we wish to detect. Note that the smaller the effect you wish to detect, the larger your sample should be. Also, having a large sample variance, will result in a large sample size needed.
+
+If you're an R user you can use the following to get a sample size:
+
+```R
+library(pwr)
+pwr.t.test(n=NULL,d=0.1, sig.level=0.05, power=0.8)
+
+     Two-sample t test power calculation 
+
+              n = 1570.733
+              d = 0.1
+      sig.level = 0.05
+          power = 0.8
+    alternative = two.sided
+
+NOTE: n is number in *each* group
+
+```
 
