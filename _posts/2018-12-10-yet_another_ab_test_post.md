@@ -8,6 +8,7 @@ modified: 2018-12-10
 comments: false
 ---
 
+** IN PROGRESS **
 
 I'm not trying to feed a fed horse (I had to) with this post, but there's nothing more dangerous than drawing conclusions from a poorly excecuted AB test. This post is will detail the factors to consider when designing an AB Test and the reasoning behind each factor.
 
@@ -70,7 +71,7 @@ Collect N samples and DON'T PEEK until the experiment concludes.
 
 # Sample Size
 
-\\n = 16 \frac{\sigma^{2}}{\delta^2})\\
+\\(n = 16 \frac{\sigma^{2}}{\delta^2})\\)
 
 where (\\ \delta\\) is the minimum effect we wish to detect. Note that the smaller the effect you wish to detect, the larger your sample should be. Also, having a large sample variance, will result in a large sample size needed.
 
@@ -92,3 +93,5 @@ NOTE: n is number in *each* group
 
 ```
 
+
+To be continued.. 
