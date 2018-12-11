@@ -20,7 +20,10 @@ The p-value is a powerful statistic that can be interpreted as the probability o
 It is very common to see people run A/B tests and draw conclusions based on wether the p-value printed in an R terminal is less than 0.05. However, this might be misleading as the computed p-value changes drastically as new data is entered.
 
 ## Example
-Consider the following example
+Imagine you want to test whether a coin is fair or not. You flip a coin 10000 times and say you measure the number of times the coin landed in Heads. Using the `binom.test` R function we check the p-value for when our (\\(H_{0}) = 0.5 \\). If the coin is fair, we should observer a large p-value.
+
+
+
 
 ```R
 set.seed(2)
@@ -41,3 +44,26 @@ df%>%ggplot(aes(x=erun,y=p.values))+geom_line()+
                      title = element_text(size = 10)) 
 
 ```
+
+As we can see in the graph, the p-values are larger than the standard threshold of 0.05 throughout the duration of the experiment, but this is not always the case. If we were to repeat the experiment, we might get misleading results.
+
+```R
+set.seed(22)
+n=10000
+toss <- rbinom(n,1,prob=0.5)
+p.values <- numeric(n)
+erun<-numeric(n)
+for (i in 5:n){
+  p.values[i] <- binom.test(table(toss[1:i]),p=0.5)$p.value
+  erun[i]<-i
+}
+
+```
+
+In this example, had we ended our experiment the moment the p-value crossed the 0.05 threhhold, we would wrongfully concluded the coin is biased. 
+
+### Solution:
+Collect N samples and DON'T PEAK until the experiment concludes.
+
+
+
