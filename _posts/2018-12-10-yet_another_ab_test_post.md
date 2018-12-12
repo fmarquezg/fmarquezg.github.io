@@ -54,6 +54,11 @@ df%>%ggplot(aes(x=erun,y=p.values))+geom_line()+
 
 ```
 
+<figure>
+	<a href="/images/catchall/p_value_A.png"><img src="/images/catchall/p_value_A.png"></a>
+	<figcaption></figcaption>
+</figure>
+
 As we can see in the graph, the p-values are larger than the standard threshold of 0.05 throughout the duration of the experiment, but we can observe some large fluctuations. As we continue tossing more coins our p-value jumps all over. In this case, we accept the Null hypothesis at all time but it is possible to not be this lucky. 
 
 ```R
@@ -68,6 +73,11 @@ for (i in 5:n){
 }
 
 ```
+
+<figure>
+	<a href="/images/catchall/p_value_B.png"><img src="/images/catchall/p_value_B.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 In this example, we repeated the experiment with the exact same parameters as the one above, but in this case, we do see our p-value fall under 0.05. As we continue to toss more coins, the p-value rises above the threshold. The lesson here is, the p-value is a strong metric but it's only reliable whenever our sample size is large enough. If we peek early, we might draw erroneous conclusions.
 
