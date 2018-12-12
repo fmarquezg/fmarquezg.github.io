@@ -15,17 +15,22 @@ I'm not trying to feed a fed horse (I had to) with this post, but there's nothin
 <br>
 
 ## Null Hypothesis (\\(H_{0})\\)
-Coming up with a hypothesis to test is the arguably the most important part of an experimint. There is nothing to test without a hypothesis. The Hypothesis we seek to reject is the Null Hypothesis. A common \\(H_{0})\\ for AB tests is \\(\mu_{A}=\mu_{B}=)\\. Which states the mean of sample A is equal to the mean of sample B.
+Coming up with a hypothesis to test is the arguably the most important part of an experiment. There is nothing to test without a hypothesis. The Hypothesis we seek to reject is the Null Hypothesis. A common \\(H_{0}\\) for AB tests is \\(\mu_{A}=\mu_{B}=\\). Which states the mean of sample A is equal to the mean of sample B.
 
 
 ## p-value
-The p-value is a powerful statistic that can be interpreted as the probability of an event equal to or more extreme than the observed one occurring when the Null Hypothesis (\\(H_{0})\\) is TRUE. We tend to reject the Null Hypothesis (\\(H_{0})\\) when the computed p-value is lower than 0.05 because the event is very unlikely to occur.
+The p-value is a powerful statistic and typically if this value is lower than 0.05 we reject the Null Hypothesis. That is a very simplistic definition, as there is more to know about the p-value. Rathe than a magic number, we should think of the p-value as the probability of an event equal to or more extreme than the observed one occurring when the Null Hypothesis (\\(H_{0})\\) is TRUE. When the p-value is under 0.05, it means the event is unlikely to happen, thus we can reject the Null and accept an alternative hypothesis.
+
+<br>
+**..but WAIT!!**
 <br>
 
-It is very common to see people run A/B tests and draw conclusions based on wether the p-value printed in an R terminal is less than 0.05. However, this might be misleading as the computed p-value changes drastically as new data is entered.
+Calculating the p-value is not enough. In fact, way before we calcualte the metric, we need to know how large our data sample should be and we should when running an experiment we need to complete the data acquisition stage before calculating p-values. 
 
-## Example
-Imagine you want to test whether a coin is fair or not. You flip a coin 10000 times and say you measure the number of times the coin landed in Heads. Using the `binom.test` R function we check the p-value for when our (\\(H_{0}) = 0.5 \\). If the coin is fair, we should observer a large p-value.
+<br> Consider the following example to 
+## Toss Fair Coin Example
+
+Imagine you want to test whether a coin is fair or not. You flip a coin 10000 times and after each toss count the cumulative  number of times the coin landed on Head. Using the `rbinom` R function we simulate the tosses and we assign a probability of 50% for Heads. Now using the `binom.test` R function we check the p-value for when our (\\(H_{0}) = 0.5 \\). Since we assigned the probability of 50% we know the Null hypothesis is TRUE so we expect the p-value to be high.
 
 
 
@@ -49,7 +54,7 @@ df%>%ggplot(aes(x=erun,y=p.values))+geom_line()+
 
 ```
 
-As we can see in the graph, the p-values are larger than the standard threshold of 0.05 throughout the duration of the experiment, but this is not always the case. If we were to repeat the experiment, we might get misleading results.
+As we can see in the graph, the p-values are larger than the standard threshold of 0.05 throughout the duration of the experiment, but we can observe some large fluctuations. As we continue tossing more coins our p-value jumps all over. In this case, we accept the Null hypothesis at all time but it is possible to not be this lucky. 
 
 ```R
 set.seed(22)
@@ -64,18 +69,21 @@ for (i in 5:n){
 
 ```
 
-In this example, had we ended our experiment the moment the p-value crossed the 0.05 threhhold, we would wrongfully concluded the coin is biased. 
- 
-### Solution:
-Collect N samples and DON'T PEEK until the experiment concludes.
+In this example, we repeated the experiment with the exact same parameters as the one above, but in this case, we do see our p-value fall under 0.05. As we continue to toss more coins, the p-value rises above the threshold. The lesson here is, the p-value is a strong metric but it's only reliable whenever our sample size is large enough. If we peek early, we might draw erroneous conclusions.
 
 # Sample Size
+
+We know we need a large enough sample size, but exactly how large? Well this depends on the effect we wish to detect, and the variance of our data. Detecting a small effect will increase our required sample size.
+
+<br>
+
+The following formula is commonly used to calculate a sample size
 
 \\(n = 16 \frac{\sigma^{2}}{\delta^2}\\)
 
 <br>
 
-Where \\( \delta\\) is the minimum effect we wish to detect. Note that the smaller the effect you wish to detect, the larger your sample should be. Also, having a large sample variance, will result in a large sample size needed.
+Where \\( \delta\\) is the minimum effect we wish to detect (Calculated as difference in sample means divided by pooled standard deviation). Also notice, having a large sample variance, will result in a large sample size needed.
 
 If you're an R user you can use the following to get a sample size:
 
@@ -96,4 +104,6 @@ NOTE: n is number in *each* group
 ```
 
 
-To be continued.. 
+# Power and sigificance level
+
+Power is 
