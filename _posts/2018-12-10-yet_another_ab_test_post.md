@@ -106,4 +106,19 @@ NOTE: n is number in *each* group
 
 # Power and sigificance level
 
-Power is 
+Power is the probability of finding an effect when there is one. We can think of it as **1 - P(Type II error)**. It is standard to set this as 80% but this can change based on the nature of the experiment.
+
+<br>
+
+Significance level is the probability of finding an effect that is Not there. In other words, **P(Type I error)**. The standard is to set this as 0.05. 
+
+
+# Conclusion
+
+So there you have it, AB testing is a very "simple" and powerful tecnnique, but we NEED to make sure we have enough data to draw conclusions. Immediately after writing our hypothesis, we need to calculate a minimum required sample size, and only if we know we can get the minimum sample size needed to detect an effect, we should proceed with the experiment.
+
+## Notes
+* Type I error: occurs when we Reject a Null Hypothesis when it is True
+* Type II error: occurs when we Fail to Reject the Null Hypothesis when it is False)
+
+
