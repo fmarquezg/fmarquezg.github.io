@@ -8,7 +8,6 @@ modified: 2018-12-10
 comments: false
 ---
 
-** IN PROGRESS **
 
 I'm not trying to feed a fed horse (I had to) with this post, but there's nothing more dangerous than drawing conclusions from a poorly excecuted AB test. This post is will detail the factors to consider when designing an AB Test and the reasoning behind each factor.
 
