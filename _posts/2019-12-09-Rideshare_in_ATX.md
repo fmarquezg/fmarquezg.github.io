@@ -39,7 +39,10 @@ for (i in s){
   )
 ```
 
-
+<figure>
+	<a href="/images/ridesharing_post/crimes_plot.png"><img src="/images/ridesharing_post/crimes_plot.png"></a>
+	<figcaption> Crimes </figcaption>
+</figure>
 
 
 
