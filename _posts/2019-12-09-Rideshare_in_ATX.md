@@ -54,7 +54,7 @@ The graph below shows the similar trends in DWI and PI monthly arrests.
 </figure>
 
 
-\\(Arrests = \Beta + \Beta_{1} * DWI + \Beta_{2} * PostRS + \Beta{3} * DWI * PostRS \\)
+\\(Arrests = \beta + \beta_{1} * DWI + \beta_{2} * PostRS + \beta{3} * DWI * PostRS \\)
 
 ## Resources
 
