@@ -43,6 +43,7 @@ for (i in s){
 
 In order quantify the effect of ridesharing, I need to establish a control. Unfortunately, ridesharing left the city all together, so any type of A/B testing was impossible. I thought about using other cities as controls, but I ran into issues finding cities similar to Austin and when I found similar cities, I discovered that they either didn't have a accesible data or the data simply didn't look accurate.
 
+
 My solution was to use the Public Intoxication (PI) count in Austin as the control, and run a difference-in-differences regression. Austin's PI count serves as a control because it accounts for Austin's growing population, and is related to the consumption of alcohol.
 
 
