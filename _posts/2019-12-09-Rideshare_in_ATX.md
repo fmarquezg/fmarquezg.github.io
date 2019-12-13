@@ -45,7 +45,13 @@ In order quantify the effect of ridesharing, I need to establish a control. Unfo
 
 <p><br></p>
 
-My solution was to use the Public Intoxication (PI) count in Austin as the control, and run a difference-in-differences regression. Austin's PI count serves as a control because it accounts for Austin's growing population, and is related to the consumption of alcohol.
+My solution was to use the Public Intoxication (PI) count in Austin as the control, and to run a Causal Impact analysis. Austin's PI count serves as a control for the following reasons:
+
+* Accounts for Austin's population growth
+* Same seasonality (weekly) as DWIs
+* Major festivals/hollidays are affected equally
+* Is an alcohol related crime
+
 
 <p><br></p>
 
@@ -56,51 +62,51 @@ The graph below shows the similar trends in DWI and PI monthly arrests.
 	<figcaption> Crimes </figcaption>
 </figure>
 
-### Difference-in-differences
+### Analysis
 
-\\(Arrests = \beta + \beta_{1} * DWI + \beta_{2} * PostRS + \beta{3} * DWI * PostRS \\)
+```R
+library(CausalImpact)
+library(tidyverse)
+```
 
 
 ```R
-data<-df%>%
-  rename(crime_type=`Highest Offense Description`,
+datad<-df%>%rename(crime_type=`Highest Offense Description`,
          occ_datetime=`Occurred Date Time`)%>%
   mutate(datetime=mdy_hms(occ_datetime))%>%
   mutate(date=date(datetime))%>%
   mutate(month=floor_date(date,unit='month'))%>%
   mutate(rs = case_when((date>='2016-05-01') & (date<'2017-06-01') ~ 0,
-                       TRUE ~ 1))%>%
+                        TRUE ~ 1))%>%
   select(month,date, rs,crime_type)%>%
-  filter(month>='2015-05-01', month<'2017-03-01')%>%
-  select(-date)%>%
-  mutate(crime_type = factor(crime_type, levels = c("PUBLIC INTOXICATION","DWI")),
-         rs = as.factor(rs))%>%
-  group_by(month,rs,crime_type)%>%summarize(events = n())
-  
-dreg <- lm(events ~ rs + crime_type +rs*crime_type, data =data)
-summary(dreg)
+  #filter(month>='2014-05-01', month<'2017-05-01')%>%
+  #select(-date)%>%
+  mutate(crime_type = factor(crime_type, levels = c("PUBLIC INTOXICATION","DWI"))
+         #rs = as.factor(rs)
+  )%>%
+  group_by(date,rs,crime_type)%>%summarize(events = n())
+
+datad2<-day_df%>%left_join(datad,by=c('date','crime_type'))%>%
+  mutate(events = ifelse(is.na(events),0,events),
+         rs = ifelse(is.na(rs),0,rs))%>%
+  mutate(rs = as.factor(rs))%>%
+  filter(date>='2016-03-15', date<'2016-06-01')
 ```
 
 ```R
-Call:
-lm(formula = events ~ rs + crime_type + rs * crime_type, data = data)
+dwi<-datad2%>%filter(crime_type=='DWI')%>%dplyr::select(events)%>%rename(dwi = events)
+pi<-datad2%>%filter(crime_type=='PUBLIC INTOXICATION')%>%dplyr::select(events)%>%rename(pi = events)
+dates_d<-datad2%>%filter(crime_type=='PUBLIC INTOXICATION')
+dates_d<-dates_d$date
 
-Residuals:
-   Min     1Q Median     3Q    Max 
--49.75 -18.75  -3.90  15.25  59.25 
+data <- zoo(cbind(dwi, pi), dates_d)
+min(dates_d)
+max(dates_d)
+pre.period <- as.Date(c("2016-03-15", "2016-04-30"))
+post.period <- as.Date(c("2016-05-01", "2016-06-01"))
 
-Coefficients:
-                  Estimate Std. Error t value Pr(>|t|)    
-(Intercept)        188.300      7.683  24.508  < 2e-16 ***
-rs1                 18.200     10.403   1.750   0.0879 .  
-crime_typeDWI      102.200     10.866   9.406  1.1e-11 ***
-rs1:crime_typeDWI  -16.950     14.712  -1.152   0.2561    
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-
-Residual standard error: 24.3 on 40 degrees of freedom
-Multiple R-squared:  0.804,	Adjusted R-squared:  0.7893 
-F-statistic:  54.7 on 3 and 40 DF,  p-value: 3.243e-14
+impact <- CausalImpact(data, pre.period, post.period,model.args = list(nseasons = 7, season.duration = 1))
+plot(impact)
 ```
 
 
