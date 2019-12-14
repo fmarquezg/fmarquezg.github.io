@@ -12,7 +12,7 @@ Ridesharing (Uber and Lyft) entered the Austin, Texas market and paused operatio
 
 <p><br></p>
 
-In this post I tried to measure the effect (if any) of ridesharing on DWIs by running a caual Impact analysis.
+In this post I tried to measure the effect (if any) of ridesharing on DWIs using the **CausalImpact** Bayesian time-series model.
 
 
 ### Timeline
@@ -24,8 +24,26 @@ In this post I tried to measure the effect (if any) of ridesharing on DWIs by ru
 * May 29, 2017 - Uber and Lyft resumed their Austin operations
 
 
+## Analysis
 
-## Collect data
+In this scenario, randomized experiment techniques are not applicable, but a causal inference approach is ideal for this scenario.
+
+CausalImpact assumes the treatment series can be explaned in terms of a control series that is not affected by the treatment or intervention. The challenge now becomes finding an appropriate control series.
+
+<p><br></p>
+
+For my control series I chose to use Austin's Public Intoxication (PI) arrest records. Austin's PI count serves as a control for the following reasons:
+
+* Accounts for Austin's population growth
+* Same seasonality (weekly) as DWIs
+* Major festivals/hollidays are affected equally
+* Is an alcohol related crime
+
+
+<p><br></p>
+
+
+### Collect data
 
 As usual, the first step is to collect crime data. Luckily the city of Austin has a nice site that allows us to collect this data at scale.
 
@@ -43,69 +61,38 @@ for (i in s){
     df<-rbind(dat,df)
   )
 ```
-## Analysis
 
-In order quantify the effect of ridesharing, I need to establish a control. Unfortunately, ridesharing left the city all together, so any type of A/B testing was impossible. I thought about using other cities as controls, but I ran into issues finding cities similar to Austin and when I found similar cities, I discovered that they either didn't have a accesible data or the data simply didn't look accurate.
-
-<p><br></p>
-
-My solution was to use the Public Intoxication (PI) count in Austin as the control. Austin's PI count serves as a control for the following reasons:
-
-* Accounts for Austin's population growth
-* Same seasonality (weekly) as DWIs
-* Major festivals/hollidays are affected equally
-* Is an alcohol related crime
-
-
-<p><br></p>
-
-The graph below shows the similar trends in DWI and PI monthly arrests. 
+The plot below suggest both the PI and the DWI series are approriate for the CausalImpact analysis. 
 
 <figure>
 	<a href="/images/ridesharing_post/crimes_plot.png"><img src="/images/ridesharing_post/crimes_plot.png"></a>
 	<figcaption> Crimes </figcaption>
 </figure>
 
+<p><br></p>
+
 ### Analysis
+
+After a little tidyversing, I created the following dataframe where the `dwi` and `pi` columns represent daily arrests. 
+
+```R
+> data
+           dwi pi
+2016-03-15   7  8
+2016-03-16   4  4
+2016-03-17  12  8
+2016-03-18  10  6
+2016-03-19  13  5
+
+```
+
+For the date range I followed best practice and selected about 45 days before intervention and 30 days post intervention.
+
 
 ```R
 library(CausalImpact)
 library(tidyverse)
-```
 
-
-```R
-datad<-df%>%rename(crime_type=`Highest Offense Description`,
-         occ_datetime=`Occurred Date Time`)%>%
-  mutate(datetime=mdy_hms(occ_datetime))%>%
-  mutate(date=date(datetime))%>%
-  mutate(month=floor_date(date,unit='month'))%>%
-  mutate(rs = case_when((date>='2016-05-01') & (date<'2017-06-01') ~ 0,
-                        TRUE ~ 1))%>%
-  select(month,date, rs,crime_type)%>%
-  #filter(month>='2014-05-01', month<'2017-05-01')%>%
-  #select(-date)%>%
-  mutate(crime_type = factor(crime_type, levels = c("PUBLIC INTOXICATION","DWI"))
-         #rs = as.factor(rs)
-  )%>%
-  group_by(date,rs,crime_type)%>%summarize(events = n())
-
-datad2<-day_df%>%left_join(datad,by=c('date','crime_type'))%>%
-  mutate(events = ifelse(is.na(events),0,events),
-         rs = ifelse(is.na(rs),0,rs))%>%
-  mutate(rs = as.factor(rs))%>%
-  filter(date>='2016-03-15', date<'2016-06-01')
-```
-
-```R
-dwi<-datad2%>%filter(crime_type=='DWI')%>%dplyr::select(events)%>%rename(dwi = events)
-pi<-datad2%>%filter(crime_type=='PUBLIC INTOXICATION')%>%dplyr::select(events)%>%rename(pi = events)
-dates_d<-datad2%>%filter(crime_type=='PUBLIC INTOXICATION')
-dates_d<-dates_d$date
-
-data <- zoo(cbind(dwi, pi), dates_d)
-min(dates_d)
-max(dates_d)
 pre.period <- as.Date(c("2016-03-15", "2016-04-30"))
 post.period <- as.Date(c("2016-05-01", "2016-06-01"))
 
@@ -113,6 +100,7 @@ impact <- CausalImpact(data, pre.period, post.period,model.args = list(nseasons 
 plot(impact)
 ```
 
+The number of DWIs after Uber and Lyft paused activities between 2016-05-01 and 2016-06-01 added up to 286. Had both companies not paused, we would have expected any amount between 210 and 278 (95% confidence interval). This means we observed a higher number of DWIs than expected, and it is highly unlikely the amount observed was the product of simple fluctiations.
 
 <figure>
 	<a href="/images/ridesharing_post/ci.png"><img src="/images/ridesharing_post/ci.png"></a>
