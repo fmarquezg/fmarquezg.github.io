@@ -8,7 +8,11 @@ modified: 2019-12-09
 comments: false
 ---
 
-Ridesharing (Uber and Lyft) entered the Austin, Texas market and paused operations for 12 months starting May 2016. Those interested in having ridesharing back in the ATX claimed that the number of DWIs decreased when ridesharing services were available. In this post I tried to validate this claim as on the one hand, it makes sense to see fewer DWIs when ridesharing is available, but on the other hand, I hope people are smart enought to not drink-and-drive regardless of which services are available to them.
+Ridesharing (Uber and Lyft) entered the Austin, Texas market and paused operations for 12 months starting May 2016. One of the popular arguments in favor of bringing Uber and Lyft back to Austin was that their service reduced the number of DWI arrests.
+
+<p><br></p>
+
+In this post I tried to measure the effect (if any) of ridesharing on DWIs by running a caual Impact analysis.
 
 
 ### Timeline
@@ -45,7 +49,7 @@ In order quantify the effect of ridesharing, I need to establish a control. Unfo
 
 <p><br></p>
 
-My solution was to use the Public Intoxication (PI) count in Austin as the control, and to run a Causal Impact analysis. Austin's PI count serves as a control for the following reasons:
+My solution was to use the Public Intoxication (PI) count in Austin as the control. Austin's PI count serves as a control for the following reasons:
 
 * Accounts for Austin's population growth
 * Same seasonality (weekly) as DWIs
@@ -108,6 +112,12 @@ post.period <- as.Date(c("2016-05-01", "2016-06-01"))
 impact <- CausalImpact(data, pre.period, post.period,model.args = list(nseasons = 7, season.duration = 1))
 plot(impact)
 ```
+
+
+<figure>
+	<a href="/images/ridesharing_post/ci.png"><img src="/images/ridesharing_post/ci.png"></a>
+	<figcaption> Crimes </figcaption>
+</figure>
 
 
 ## Resources
