@@ -65,11 +65,17 @@ for (i in s){
 The plot below suggest both the PI and the DWI series are approriate for the CausalImpact analysis. 
 
 <figure>
-	<a href="/images/ridesharing_post/crimes_plot.png"><img src="/images/ridesharing_post/crimes_plot.png"></a>
+	<a href="/images/ridesharing_post/all_atx_crimes.png"><img src="/images/ridesharing_post/all_atx_crimes.png"></a>
 	<figcaption> Crimes </figcaption>
 </figure>
 
 <p><br></p>
+
+
+<figure>
+	<a href="/images/ridesharing_post/select_crimes.png"><img src="/images/ridesharing_post/select_crimes.png"></a>
+	<figcaption> Crimes </figcaption>
+</figure>
 
 ### Analysis
 
@@ -103,9 +109,12 @@ plot(impact)
 The number of DWIs after Uber and Lyft paused activities between 2016-05-01 and 2016-06-01 added up to 286. Had both companies not paused, we would have expected any amount between 210 and 278 (95% confidence interval). This means we observed a higher number of DWIs than expected, and it is highly unlikely the amount observed was the product of simple fluctiations.
 
 <figure>
-	<a href="/images/ridesharing_post/ci.png"><img src="/images/ridesharing_post/ci.png"></a>
+	<a href="/images/ridesharing_post/daily_causal_impact.png"><img src="/images/ridesharing_post/daily_causal_impact.png"></a>
 	<figcaption> Crimes </figcaption>
 </figure>
+
+
+
 
 
 ## Resources
