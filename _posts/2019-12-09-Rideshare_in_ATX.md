@@ -28,6 +28,8 @@ In this post I tried to measure the effect (if any) of ridesharing on DWIs using
 
 When Uber and Lyft halted operations in Austin, they did so in an instantaneous fashion. They did not stop operations in a specific Zip Code or periodically reduced the number of drivers, they basically just shut down on from one day to another. In this scenario, measuring the effect of ridesharing on DWIs is not possible via randomized experiment techniques was not possible, but a causal inference approach is ideal for this scenario.
 
+<p><br></p>
+
 CausalImpact assumes the treatment series can be explaned in terms of a control series that is not affected by the treatment or intervention. The challenge now becomes finding an appropriate control series.
 
 <p><br></p>
@@ -107,8 +109,15 @@ plot(impact)
 
 The result is a bit surprising. There is no evidence to support any effect of an increase or decrease in the count of DWIs after Uber and Lyft paused operations in Austin. The cumulative plot (bottom 3rd) plots the cumulative difference between the actual DWI count and the estimated count had nothing changed. As we can see, we are safe saying there was no clear effect.
 
+#### Weekly Aggregation
+
+
+
+<p><br></p>
+
 Something not included in the analysis is that while Uber and Lyft did pause operations, there were some smaller ridesharing alternatives entering the market (i.e.  Fasten, Fare, RideAustin, Random Facebook groups, craigslist). Saying ridesharing didn't exist in Austin after Uber and Lyft left would be incorrect, and maybe the reason why we don't detect a significant increase in DWIs is because there were ridesharing options available to those who would otherwise be dumb enough to drink and drive.
 
+<p><br></p>
 
 Notes - The full code can be found on my github here.
 
