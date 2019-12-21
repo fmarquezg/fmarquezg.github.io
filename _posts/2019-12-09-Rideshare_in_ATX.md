@@ -111,15 +111,29 @@ The result is a bit surprising. There is no evidence to support any effect of an
 
 #### Weekly Aggregation
 
+Given the noise originating from having daily data points, I tried running this same analysis but on a weekly basis.
 
+<figure>
+	<a href="/images/ridesharing_post/daily_causal_impact.png"><img src="/images/ridesharing_post/weekly_causal_impact.png"></a>
+	<figcaption> Crimes </figcaption>
+</figure>
+
+The conclusion is consistent, no evidence to suggest a change in DWI counts.
+
+<figure>
+	<a href="/images/ridesharing_post/weekly_causal_impact.png"><img src="/images/ridesharing_post/daily_causal_impact.png"></a>
+	<figcaption> Crimes </figcaption>
+</figure>
+
+
+## Summary
+
+<p><br></p>
+This analysis failed to measure a change in DWIs after Uber and Lyft paused operations in Austin. Looking at data on a weekly and daily basis yielded the same results. It is important to acknowledge that while Uber and Lyft did pause operations, there were some smaller ridesharing alternatives entering the market (i.e.  Fasten, Fare, RideAustin, Random Facebook groups, craigslist). Saying ridesharing didn't exist in Austin after Uber and Lyft left would be incorrect, and maybe the reason why we don't detect a significant increase in DWIs is because there were ridesharing options available to those who would otherwise be dumb enough to drink and drive.
 
 <p><br></p>
 
-Something not included in the analysis is that while Uber and Lyft did pause operations, there were some smaller ridesharing alternatives entering the market (i.e.  Fasten, Fare, RideAustin, Random Facebook groups, craigslist). Saying ridesharing didn't exist in Austin after Uber and Lyft left would be incorrect, and maybe the reason why we don't detect a significant increase in DWIs is because there were ridesharing options available to those who would otherwise be dumb enough to drink and drive.
-
-<p><br></p>
-
-Notes - The full code can be found on my github here.
+Notes - The full code can be found on my github (<a href="https://github.com/fmarquezg/ride_sharing_austin/blob/master/causalImpact_ridesharing.R" target="_blank"> daily </a>, <a href="https://github.com/fmarquezg/ride_sharing_austin/blob/master/causal_impact_ridesharing_weekly.R" target="_blank"> weekly </a>).
 
 
 ## Resources
