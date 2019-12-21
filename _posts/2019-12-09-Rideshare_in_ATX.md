@@ -116,14 +116,14 @@ The result is a bit surprising. There is no evidence to support any effect of an
 Given the noise originating from having daily data points, I tried running this same analysis but on a weekly basis.
 
 <figure>
-	<a href="/images/ridesharing_post/weekly_select_crimes.png"><img src="/images/ridesharing_post/weekly_causal_impact.png"></a>
+	<a href="/images/ridesharing_post/weekly_select_crimes.png"><img src="/images/ridesharing_post/weekly_select_crimes.png"></a>
 	<figcaption> Crimes </figcaption>
 </figure>
 
 The conclusion is consistent, no evidence to suggest a change in DWI counts. The probability of observing an effect similar to the one observed by chance based on the *pre* data data is 34%.
 
 <figure>
-	<a href="/images/ridesharing_post/weekly_causal_impact.png"><img src="/images/ridesharing_post/daily_causal_impact.png"></a>
+	<a href="/images/ridesharing_post/weekly_causal_impact.png"><img src="/images/ridesharing_post/weekly_causal_impact.png"></a>
 	<figcaption> Crimes </figcaption>
 </figure>
 
