@@ -107,7 +107,9 @@ plot(impact)
 </figure>
 
 
-The result is a bit surprising. There is no evidence to support any effect of an increase or decrease in the count of DWIs after Uber and Lyft paused operations in Austin. The cumulative plot (bottom 3rd) plots the cumulative difference between the actual DWI count and the estimated count had nothing changed. As we can see, we are safe saying there was no clear effect.
+
+
+The result is a bit surprising. There is no evidence to support any effect of an increase or decrease in the count of DWIs after Uber and Lyft paused operations in Austin. The cumulative plot (bottom 3rd) plots the cumulative difference between the actual DWI count and the estimated count had nothing changed. The probability of observing the *post* count of DWIs had Uber and Lyft remained in Austin is of 41%. As we can see, we are safe saying there was no clear effect.
 
 #### Weekly Aggregation
 
@@ -118,7 +120,7 @@ Given the noise originating from having daily data points, I tried running this 
 	<figcaption> Crimes </figcaption>
 </figure>
 
-The conclusion is consistent, no evidence to suggest a change in DWI counts.
+The conclusion is consistent, no evidence to suggest a change in DWI counts. The probability of observing an effect similar to the one observed by chance based on the *pre* data data is 34%.
 
 <figure>
 	<a href="/images/ridesharing_post/weekly_causal_impact.png"><img src="/images/ridesharing_post/daily_causal_impact.png"></a>
