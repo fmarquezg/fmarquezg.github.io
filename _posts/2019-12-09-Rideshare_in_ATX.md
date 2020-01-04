@@ -29,16 +29,8 @@ When Uber and Lyft halted operations in Austin, they did so in an instantaneous 
 
 <p><br></p>
 
-To infer the causal impact, we must predict the counter-factual response in a synthetic control what would have happened had no intervention taken place (i.e. Uber and Lyft not paused operations).
-<p><br></p>
 
-### Controls
-
-For my control series I chose arrest counts for other crimes commited in Austin. The arrest count comes from the same source as the DWI counts. The figure below plots the treand line for arrests broken down by crime type.
-
-
-<p><br></p>
-
+In Causal Impact analysis we construct a counterfactual by combining a set of candidate predictor variables into a single synthetic control. In this case, I decided to look at different categories of crime arrests in Austin for the selection of control series.
 
 
 
@@ -66,7 +58,7 @@ The figure below shows the selected controls.
 
 ### Testing Hypothesis
 
-After a little tidyversing, I created a zoo object that included the DWI count followed by the other controls.
+After a little tidyversing, I made my data CausalImpact ready by creating a zoo object that included the DWI count followed by the other controls.
 
 ```R
 data <- zoo(cbind(DWI,PI, ABC, AT, CM,FD), dates_d)
