@@ -8,12 +8,11 @@ modified: 2019-12-09
 comments: false
 ---
 
-Ridesharing (Uber and Lyft) entered the Austin, Texas market and paused operations for 12 months starting May 2016. One of the popular arguments in favor of bringing Uber and Lyft back to Austin was that their service reduced the number of DWI arrests.
+Back in 2016 Uber and Lyft faced regulation frictions with the city of Austin. Those frictions lead to a 12 month complete cease of local operations starting in May 2016. Social media political experts flooded the internet with arguments both in favor and against allowing both ridesharing companies to continue their operations. The most popular argument in favor of Uber and Lyft was that they were reducing the number of drunk drivers out on the road.
 
 <p><br></p>
 
-In this post I tried to measure the effect (if any) of ridesharing on DWIs using the <a href="https://github.com/google/CausalImpact" target="_blank"> CausalImpact </a> Bayesian time-series model.
-
+In this post I tried to measure the effect (if any) of ridesharing on the number of drunk drivers out on the road. In order to measure this, I performed a <a href="https://github.com/google/CausalImpact" target="_blank"> CausalImpact </a> analysis on the number of DWI and DUI arrest counts.
 
 ### Event Timeline
 
@@ -26,12 +25,11 @@ In this post I tried to measure the effect (if any) of ridesharing on DWIs using
 
 ## Analysis
 
-When Uber and Lyft halted operations in Austin, they did so in an instantaneous fashion. They did not stop operations in a specific Zip Code or periodically reduced the number of drivers, they basically just shut down on from one day to another. In this scenario, measuring the effect of ridesharing on DWIs is not possible via randomized experiment techniques was not possible, but a causal inference approach is ideal for this scenario.
+When Uber and Lyft halted operations in Austin, they did so in an instantaneous fashion. They did not stop operations in a specific Zip Code or periodically reduced the number of drivers, they basically just shut down on from one day to another. In this scenario, measuring the effect of ridesharing on drunk driving via randomized experiment techniques was not possible, but a causal impact approach is ideal for this scenario.
 
 <p><br></p>
 
-CausalImpact assumes the treatment series can be explaned in terms of a control series that is not affected by the treatment or intervention. The challenge now becomes finding an appropriate control series.
-
+To infer the causal impact, we must predict the counter-factual response in a synthetic control what would have happened had no intervention taken place (i.e. Uber and Lyft not paused operations).
 <p><br></p>
 
 ### Controls
