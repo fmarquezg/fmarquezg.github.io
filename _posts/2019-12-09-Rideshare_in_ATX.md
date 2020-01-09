@@ -36,7 +36,7 @@ In Causal Impact analysis we construct a counterfactual by combining a set of ca
 
 <figure>
 	<a href="/images/ridesharing_post/all_atx_crimes.png"><img src="/images/ridesharing_post/all_atx_crimes.png"></a>
-	<figcaption> Crimes </figcaption>
+	<figcaption> </figcaption>
 </figure>
 
 <p><br></p>
@@ -53,7 +53,7 @@ The figure below shows the selected controls.
 
 <figure>
 	<a href="/images/ridesharing_post/select_crimes.png"><img src="/images/ridesharing_post/select_crimes.png"></a>
-	<figcaption> Crimes </figcaption>
+	<figcaption>  </figcaption>
 </figure>
 
 ### Testing Hypothesis
