@@ -77,7 +77,7 @@ data<-na.fill(data,0)
 
 ```
 
-The folks at google made the implementation of CausalImpact incredibly easy. 
+Next I ran the CI analysis with 3 lines of code!
 
 ```R
 pre.period <- as.Date(c("2016-02-20", "2016-04-30"))
@@ -103,25 +103,26 @@ The result is a bit surprising. There is no evidence to support any effect of an
 
 #### Weekly Aggregation
 
-Given the noise originating from having daily data points, I tried running this same analysis but on a weekly basis.
+Given the noise originating from having daily data points, I tried running this same analysis but now bined on a weekly basis.
 
 <figure>
 	<a href="/images/ridesharing_post/weekly_select_crimes.png"><img src="/images/ridesharing_post/weekly_select_crimes.png"></a>
-	<figcaption> Crimes </figcaption>
+	<figcaption> </figcaption>
 </figure>
 
-The conclusion is consistent, no evidence to suggest a change in DWI counts. The probability of observing an effect similar to the one observed by chance based on the *pre* data data is 34%.
 
 <figure>
 	<a href="/images/ridesharing_post/weekly_causal_impact.png"><img src="/images/ridesharing_post/weekly_causal_impact.png"></a>
-	<figcaption> Crimes </figcaption>
+	<figcaption>  </figcaption>
 </figure>
+
+The conclusion is consistent with the previous analysis. No evidence to suggest a change in DWI counts. The probability of observing an effect similar to the one observed by chance based on the *pre* data data is 34%.
 
 
 ## Summary
 
 <p><br></p>
-This analysis failed to measure a change in DWIs after Uber and Lyft paused operations in Austin. Looking at data on a weekly and daily basis yielded the same results. It is important to acknowledge that while Uber and Lyft did pause operations, there were some smaller ridesharing alternatives entering the market (i.e.  Fasten, Fare, RideAustin, Random Facebook groups, craigslist). Saying ridesharing didn't exist in Austin after Uber and Lyft left would be incorrect, and maybe the reason why we don't detect a significant increase in DWIs is because there were ridesharing options available to those who would otherwise be dumb enough to drink and drive.
+This analysis failed to measure a change in DWIs after Uber and Lyft paused operations in Austin. Looking at data on a weekly and daily basis both failed to suggest an impact. It is important to acknowledge that while Uber and Lyft did pause operations, there were some smaller ridesharing alternatives entering the market (i.e.  Fasten, Fare, RideAustin, Random Facebook groups, craigslist). Saying ridesharing didn't exist in Austin after Uber and Lyft left would be incorrect, and maybe the reason why we don't detect a significant increase in DWIs is because there were ridesharing options available to those who would otherwise be dumb enough to drink and drive.
 
 <p><br></p>
 
